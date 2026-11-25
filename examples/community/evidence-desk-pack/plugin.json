@@ -1,0 +1,8 @@
+{
+  "name": "evidence-desk-pack",
+  "version": "0.1.0",
+  "description": "社区入门样例。用同一张证据对照表核查引文与结论。",
+  "skills": ["evidence-desk-check/SKILL.md"],
+  "mcpServers": [],
+  "capabilities": ["逐条核查主张、引文与出处"]
+}

@@ -1,0 +1,92 @@
+{
+  "version": "formal-retrieval-v1",
+  "frozenAt": "2026-11-03",
+  "description": "中文问题、预先指定的教材章节与正文概念组合。只测检索/来源完整性，不判断生成答案的语义正确性。期望不得从被测排名自动生成。",
+  "matcherClarifications": [
+    "第一次校验发现两个概念判据没有任何金标准候选：该译本将witness译作例证，并使用ex_intro构造见证；基础情形直接写成P(O)。因此仅补入这些正文等义表达，未更改问题、目标章节或期望语义。"
+  ],
+  "cases": [
+    {
+      "id": "conjunction-elimination",
+      "question": "合取命题成立时，如何分别取出左边和右边的证据？",
+      "sourcePaths": ["lf-current/Logic.v", "lf-current/ProofObjects.v"],
+      "concepts": [["合取", "conjunction", "conj"], ["destruct", "proj1", "proj2", "拆分", "分解"]],
+      "meaning": "须召回合取及其证据拆分的正文，只有章节标题或关键词不计命中。"
+    },
+    {
+      "id": "iff-two-directions",
+      "question": "逻辑等价为什么需要两个方向的蕴含证明？",
+      "sourcePaths": ["lf-current/Logic.v", "lf-current/ProofObjects.v"],
+      "concepts": [["<->", "\\biff\\b", "逻辑等价"], ["P\\s*->\\s*Q"], ["Q\\s*->\\s*P"]],
+      "meaning": "正文必须同时出现等价及两个蕴含方向。"
+    },
+    {
+      "id": "constructive-excluded-middle",
+      "question": "排中律在 Coq 的构造逻辑中可以直接证明吗？",
+      "sourcePaths": ["lf-current/Logic.v"],
+      "concepts": [["排中律", "excluded_middle"], ["构造", "constructive"]],
+      "meaning": "须召回比较经典与构造逻辑的原文，练习占位不作为已证明结论。"
+    },
+    {
+      "id": "existential-witness",
+      "question": "存在量词命题应该如何提供见证并完成证明？",
+      "sourcePaths": ["lf-current/Logic.v", "lf-current/ProofObjects.v"],
+      "concepts": [["exists", "存在量化"], ["见证", "witness", "例证", "ex_intro"]],
+      "meaning": "正文必须解释存在证明与见证，而非仅出现exists代码。"
+    },
+    {
+      "id": "natural-induction",
+      "question": "自然数归纳证明为什么要分别处理基础情形和归纳步骤？",
+      "sourcePaths": ["lf-current/Induction.v", "lf-current/IndPrinciples.v"],
+      "concepts": [["归纳假设", "induction hypothesis"], ["基础", "基本", "base case", "基例", "P\\(O\\)"]],
+      "meaning": "须包含归纳假设和基础情形的实际说明。"
+    },
+    {
+      "id": "curry-howard",
+      "question": "柯里霍华德对应如何把命题、类型、证明与程序联系起来？",
+      "sourcePaths": ["lf-current/ProofObjects.v"],
+      "concepts": [["柯里", "Curry", "霍华德"], ["证明", "proof"], ["类型", "type"]],
+      "meaning": "应命中ProofObjects中的实际对应说明，别章仅提到下章名称不算。"
+    },
+    {
+      "id": "hoare-assignment",
+      "question": "霍尔逻辑的赋值规则为什么要在后置条件里做变量替换？",
+      "sourcePaths": ["plf-current/Hoare.v", "plf-current/HoareAsLogic.v"],
+      "concepts": [["assn_sub", "替换", "替代", "substitution"], ["hoare_asgn", "赋值"]],
+      "meaning": "须包含赋值与断言替换的规则正文。"
+    },
+    {
+      "id": "loop-invariant",
+      "question": "一个循环不变式需要满足哪些条件，才能支持循环的正确性证明？",
+      "sourcePaths": ["plf-current/Hoare.v", "plf-current/Hoare2.v"],
+      "concepts": [["不变式", "invariant"], ["前置", "precondition", "初始化"], ["后置", "postcondition", "保持", "preserv"]],
+      "meaning": "须包含循环不变式与初始/结束或保持义务，不能只命中invariant这个词。"
+    },
+    {
+      "id": "smallstep-stuck-divergence",
+      "question": "小步语义为什么能区分程序不终止和程序卡住？",
+      "sourcePaths": ["plf-current/Smallstep.v"],
+      "concepts": [["小步", "small-step", "small step"], ["不终止", "发散", "diverg", "无限"], ["卡住", "卡死", "stuck", "停滞"]],
+      "meaning": "须包含区分发散与卡住的解释，单纯多步归约练习不算。"
+    },
+    {
+      "id": "type-safety",
+      "question": "类型安全为什么需要同时证明进展性和类型保持性？",
+      "sourcePaths": ["plf-current/Types.v", "plf-current/StlcProp.v"],
+      "concepts": [["可进", "进展", "progress"], ["保型", "保持", "preservation"], ["可靠", "安全", "soundness", "stuck"]],
+      "meaning": "同一正文单元须联系progress与preservation及安全结论。"
+    },
+    {
+      "id": "missing-converse-explanation",
+      "question": "请查找明确解释“逆命题不成立”的原文。",
+      "expectInsufficient": true,
+      "meaning": "本快照没有直接讲解该说法的原文；形式语言可另作反例，但不能把泛泛的“不成立”当成检索证据。"
+    },
+    {
+      "id": "outside-domain-medicine",
+      "question": "阿司匹林能降低心肌梗死复发风险吗，推荐每日剂量是多少？",
+      "expectInsufficient": true,
+      "meaning": "该计算机专业语料不应为医学风险与剂量提供强证据；空结果或弱召回才通过。"
+    }
+  ]
+}

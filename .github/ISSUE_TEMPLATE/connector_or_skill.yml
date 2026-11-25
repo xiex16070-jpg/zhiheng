@@ -1,0 +1,46 @@
+name: 技能 / MCP 连接器 / 主题与功能提案
+description: 提议或分享社区技能包、MCP 连接器示例、HanLogic 案例、主题或界面改进
+title: "[Community]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 扩展方向
+      options:
+        - 个人技能 / 声明式插件包 (SKILL.md / plugin.json)
+        - MCP 连接器示例与兼容矩阵
+        - 模型能力合同与适配对照
+        - HanLogic 规则案例 / 推理策略
+        - 主题、排版与无障碍交互
+        - 检索 / 文档解析 / 存储适配器
+        - 其他功能建议
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标与使用场景
+      description: 描述这项扩展解决什么问题、面向哪类任务或用户
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: 接口、权限与数据边界
+      description: 如涉及 MCP、联网或外部服务，请写明传输协议、数据去向、最小凭据范围、费用与潜在副作用
+  - type: textarea
+    id: verification
+    attributes:
+      label: 验收方式与兼容矩阵
+      description: 说明可重复的验证命令、覆盖的系统/版本，并区分本机实测与待外部验证部分
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: 来源与许可证
+      description: 确认原创或写明上游项目、作者署名及兼容许可证
+      placeholder: 原创 (Apache-2.0) / 上游项目 ...
+    validations:
+      required: true

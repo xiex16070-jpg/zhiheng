@@ -1,0 +1,22 @@
+<View>
+  <Header value="独立证据审核 / Independent evidence review"/>
+  <Header value="问题（用于理解语境，不替代待审核结论）"/>
+  <Text name="question" value="$question" valueType="text"/>
+  <Header value="待审核结论"/>
+  <Text name="claim" value="$claim" valueType="text"/>
+  <Header value="固定原文片段：支持或矛盾时请选中证据"/>
+  <Labels name="evidence" toName="evidence_text">
+    <Label value="Evidence" background="#D2E8DE"/>
+  </Labels>
+  <Text name="evidence_text" value="$evidenceText" valueType="text"/>
+  <Text name="source_attribution" value="$sourceAttribution" valueType="text"/>
+  <Text name="source_license" value="$sourceLicenseNotice" valueType="text"/>
+  <Header value="supported = 支持；contradicted = 明确矛盾；insufficient = 证据不足（不能因缺乏证据判为矛盾）。"/>
+  <Choices name="verdict" toName="claim" choice="single" required="true">
+    <Choice value="supported"/>
+    <Choice value="contradicted"/>
+    <Choice value="insufficient"/>
+  </Choices>
+  <Header value="请独立说明判断理由；不要推测其他审核者的答案。"/>
+  <TextArea name="rationale" toName="claim" required="true" rows="3"/>
+</View>

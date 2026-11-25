@@ -1,0 +1,101 @@
+name: test
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        node: ['22.12.0', '22', '24', '26']
+        include:
+          - os: windows-latest
+            node: '22.12.0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --engine-strict
+      - if: runner.os == 'Linux'
+        run: npx playwright install --with-deps chromium
+      - if: runner.os == 'Windows'
+        run: npx playwright install chromium
+      - run: npm run check:ui
+      - run: npm test
+
+  ui-experience:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.0
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements-ui.txt
+      - run: npm ci
+      - run: python -m pip install -r scripts/requirements-ui.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: npm run check:ui
+      - run: python scripts/ui-settings-navigation-smoke.py
+      - run: python scripts/ui-execution-smoke.py
+      - run: python scripts/ui-motion-smoke.py
+      - run: python scripts/ui-experience-smoke.py
+      - run: python scripts/ui-effects-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: isolated-ui-evidence
+          path: |
+            .shots/settings-navigation/acceptance.json
+            .shots/execution/acceptance.json
+            .shots/experience/acceptance.json
+          retention-days: 30
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: isolated-ui-failure
+          path: |
+            .shots/settings-navigation/
+            .shots/execution/
+            .shots/motion/
+            .shots/experience/
+            .shots/effects/
+          if-no-files-found: ignore
+
+  retrieval-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.0
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            evals/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix evals
+      - run: npm run --prefix evals test:dependencies
+      - run: npm audit --prefix evals --audit-level=high
+      - run: npm run corpus:check
+      - run: npm run eval:formal
+      - run: npm run eval:retrieval
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: retrieval-baseline
+          path: evals/results/*.json
+          if-no-files-found: ignore

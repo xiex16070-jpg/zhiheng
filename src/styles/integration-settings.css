@@ -1,0 +1,58 @@
+.integration-suite { margin-top: 20px; }
+.integration-nav { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; padding: 5px; margin: 20px 0 25px; border: 1px solid var(--line); background: var(--surface-3); border-radius: 12px; }
+.integration-nav button { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:44px; padding: 10px 13px; border:1px solid transparent; border-radius:8px; color:var(--muted); background:transparent; font:600 12px var(--sans); transition:background .15s,color .15s,box-shadow .15s; }
+.integration-nav button span { font:12px var(--mono); opacity:.65; }
+.integration-nav button[aria-pressed="true"] { background:var(--surface); color:var(--accent); border-color:var(--line); box-shadow:0 2px 7px #00000008; }
+.integration-nav button:hover { color:var(--accent); }
+.integration-nav button:focus-visible,.integration-suite button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.integration-section-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:12px 0; }
+.integration-kicker { color:var(--muted); font:12px var(--mono); letter-spacing:.14em; }
+.integration-section-heading h4,.integration-section-heading h3 { margin:6px 0 0; font:600 22px var(--serif); color:var(--ink); }
+.integration-state { flex-shrink:0; border:1px solid var(--line); color:var(--accent); padding:6px 9px; border-radius:5px; font:12px var(--sans); }
+.integration-toggle { display:flex; gap:12px; align-items:center; border:1px solid var(--line); border-radius:10px; padding:14px 15px; background:var(--surface); cursor:pointer; }
+.integration-toggle:has(input:checked) { border-color:var(--accent); background:var(--accent-soft); }
+.integration-toggle input { appearance:none; flex:none; width:34px; height:20px; border-radius:20px; background:var(--line-strong); position:relative; cursor:pointer; }
+.integration-toggle input::after { content:''; position:absolute; width:14px; height:14px; border-radius:50%; background:var(--surface); top:3px; left:3px; transition:transform .15s; }
+.integration-toggle input:checked { background:var(--accent); }
+.integration-toggle input:checked::after { transform:translateX(14px); }
+.integration-toggle input:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.integration-toggle strong { display:block; font:600 12px var(--sans); }
+.integration-toggle small { display:block; color:var(--muted); font:12px/1.7 var(--sans); margin-top:5px; }
+.integration-fields { display:grid; grid-template-columns:1.3fr 1fr; gap:14px; }
+.integration-install { display:flex; gap:10px; align-items:end; margin-bottom:15px; }
+.integration-install label { flex:1; min-width:0; margin:0; }
+.integration-install button { min-height:42px; padding-inline:16px; }
+.pack-preflight { margin-block:10px 20px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); overflow-wrap:anywhere; }
+.pack-preflight h5 { margin:0; font:600 16px var(--sans); }
+.pack-preflight article { margin-top:12px; border-top:1px solid var(--line); padding-top:12px; }
+.pack-preflight p,.preflight-files,.preflight-issues,#pack-progress { color:var(--muted); font:13px/1.65 var(--sans); }
+.pack-preflight p { margin:4px 0; }
+.preflight-files,.preflight-issues { margin-block:8px; }
+.preflight-files summary { cursor:pointer; color:var(--accent); }
+.preflight-files summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.pack-preflight ul { padding-inline-start:20px; }
+.skill-export { flex-wrap:wrap; align-items:center; gap:10px; }
+.skill-export [role=status] { color:var(--muted); overflow-wrap:anywhere; }
+.integration-pack { border-top:1px solid var(--line); padding:17px 0; }
+.integration-pack-title { display:flex; align-items:center; gap:10px; }
+.integration-pack-title strong { font:600 13px var(--sans); overflow-wrap:anywhere; }
+.integration-pack-title > span { font:12px var(--mono); color:var(--muted); }
+.integration-pack p { color:var(--muted); font:12px/1.7 var(--sans); }
+.integration-tags { display:flex; flex-wrap:wrap; gap:5px; }
+.integration-tags span { font:12px var(--mono); padding:4px 7px; border:1px solid var(--line); border-radius:4px; color:var(--accent); background:var(--accent-soft); }
+.integration-mcp-draft { display:flex; justify-content:space-between; align-items:center; gap:12px; border:1px dashed var(--line-strong); border-radius:7px; padding:10px; margin-top:12px; }
+.integration-mcp-draft strong,.integration-mcp-draft small { display:block; font:12px var(--sans); overflow-wrap:anywhere; }
+.integration-mcp-draft small { color:var(--muted); margin-top:5px; font-size:12px; }
+.integration-mcp-draft button { flex:none; font-size:12px; min-height:38px; }
+.integration-empty { padding:26px 12px; text-align:center; color:var(--muted); font:13px/1.8 var(--serif); border:1px dashed var(--line); border-radius:8px; margin-top:14px; }
+.skill-effect-summary { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:22px 0; }
+.skill-effect-summary > span { display:flex; flex-direction:column; gap:8px; padding:14px; border-left:2px solid var(--accent); background:var(--accent-soft); color:var(--muted); font:12px var(--sans); }
+.skill-effect-summary strong { font:25px var(--serif); color:var(--accent); }
+.skill-effect-head,.skill-effect-row { display:grid; grid-template-columns:minmax(120px,1fr) 90px 100px; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); font:12px var(--sans); }
+.skill-effect-head { color:var(--muted); font-size:12px; }
+.skill-effect-row strong { display:block; overflow-wrap:anywhere; }
+.skill-effect-row small { display:block; margin-top:6px; color:var(--muted); font:12px/1.5 var(--sans); }
+.model-vision-toggle { margin-top:18px; }
+.integration-behavior { margin-top:24px; padding-top:18px; border-top:1px solid var(--line); }
+@media(max-width:600px) { .integration-fields { grid-template-columns:1fr; gap:0; }.integration-nav button { padding:9px 7px; font-size:12px; }.integration-nav button span { display:none; }.integration-section-heading h4 { font-size:20px; }.skill-effect-head,.skill-effect-row { grid-template-columns:minmax(95px,1fr) 65px 75px; gap:8px; }.integration-install { align-items:stretch; flex-direction:column; } }
+@media(prefers-reduced-motion:reduce) { .integration-nav button,.integration-toggle input::after { transition:none; } }

@@ -1,0 +1,55 @@
+/* Shared task, reading and control hierarchy. Theme values live in tokens.css. */
+.task-context { display:flex; flex-wrap:wrap; gap:var(--space-2); margin-bottom:var(--space-2); min-width:0; }
+.task-context button { display:flex; align-items:center; gap:6px; min-width:0; max-width:100%; min-height:30px; padding:4px 8px; border:0; background:transparent; border-radius:8px; color:var(--muted); font:500 var(--text-sm)/1.5 var(--sans); }
+.task-context button:hover { color:var(--accent); background:var(--accent-soft); }
+.task-context button span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.model-onboarding { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; padding:12px 16px; border:1px solid var(--accent-line); border-radius:var(--radius-control); background:var(--accent-soft); color:var(--ink-2); font-size:var(--text-sm); }
+.model-onboarding>span { display:flex; align-items:center; gap:8px; }
+.model-onboarding .btn { white-space:nowrap; background:var(--surface); }
+.composer-hint { align-items:center; }
+.composer-tools { position:relative; }
+.composer-tools>summary { display:flex; align-items:center; gap:6px; cursor:pointer; list-style:none; padding:5px 8px; border-radius:8px; color:var(--muted); font-size:var(--text-sm); min-height:30px; }
+.composer-tools>summary::-webkit-details-marker { display:none; }
+.composer-tools[open]>summary,.composer-tools>summary:hover { background:var(--surface-2); color:var(--accent); }
+.composer-tools small { font-size:var(--text-xs); color:var(--accent); }
+.composer-tools-body { position:absolute; bottom:calc(100% + 12px); left:0; z-index:45; display:grid; gap:8px; min-width:208px; max-width:calc(100vw - 32px); padding:12px; border:1px solid var(--line-strong); border-radius:var(--radius-control); background:var(--surface); box-shadow:var(--shadow); }
+.composer-tools .btn.tiny { min-height:var(--control-height); font-size:var(--text-sm); }
+.composer-tools #background-submit { display:flex; }
+.composer-box .send { width:44px; height:44px; }
+.composer-tools .composer-skill { display:flex; min-width:0; }
+.composer-tools #choose-skill { max-width:240px; overflow-wrap:anywhere; }
+.task-recovery { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:12px; }
+.task-recovery [role=status] { width:100%; font-size:var(--text-sm); color:var(--muted); }
+.task-recovery .btn,.reader-error-actions .btn { min-height:var(--control-height); font-size:var(--text-sm); }
+.warn-note[data-terminal=stopped] { background:var(--surface-2); border-color:var(--line); color:var(--ink-2); }
+.reader-error-actions { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.reader-foot { flex-wrap:wrap; }
+.answer { font-size:var(--text-lg); line-height:1.8; overflow-wrap:anywhere; }
+.answer a { text-decoration:underline; text-underline-offset:3px; }
+.answer-table { max-width:100%; overflow:auto; margin:16px 0; border:1px solid var(--line); border-radius:12px; }
+.answer-table table { width:100%; border-collapse:collapse; font-size:var(--text-base); }
+.answer-table th,.answer-table td { min-width:100px; padding:12px 16px; border-bottom:1px solid var(--line); vertical-align:top; }
+.answer-table th { background:var(--surface-2); font-weight:600; }
+.answer-table tr:last-child td { border-bottom:0; }
+.answer-table .align-left { text-align:left; }.answer-table .align-center { text-align:center; }.answer-table .align-right { text-align:right; }
+.msg,.composer { max-width:var(--content-width); }
+.modal input,.modal textarea,.modal select { border-radius:var(--radius-control); }
+.modal .field :is(input,textarea,select) { font-size:var(--text-base); }
+.modal-foot .btn { min-height:var(--control-height); font-size:var(--text-base); }
+.configuration-navigation button { min-height:var(--control-height); font-size:var(--text-sm); }
+.sidebar-tools .toolbar-button,.sidebar-settings { font-size:var(--text-sm); }
+.modal :is(input,textarea,select)[aria-invalid=true] { border-color:var(--danger); }
+.field-error { display:block; width:100%; color:var(--danger); font:400 var(--text-sm)/1.6 var(--sans); margin-top:4px; }
+.task-context button:focus-visible,.composer-tools>summary:focus-visible,.answer-table:focus-visible,.modal :is(input,textarea,select):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.composer-box:focus-within { border-color:var(--accent); }
+.composer-hint #hint-right { flex-basis:100%; line-height:1.6; }
+.composer-hint #hint-right:empty { display:none; }
+@media(max-width:700px) {
+  .task-context { gap:4px; }.task-context button { min-height:44px; }
+  .composer-hint .btn.tiny,.composer-tools>summary { min-height:44px; }
+  .model-onboarding { flex-wrap:wrap; }.model-onboarding .btn { min-height:44px; }
+  .composer-hint>span:has(kbd) { display:none; }
+  .composer-tools-body { left:auto; right:0; }
+  .answer-table th,.answer-table td { padding:10px 12px; }
+}
+@media(prefers-reduced-motion:reduce) { .composer-tools-body { animation:none; transition:none; } }

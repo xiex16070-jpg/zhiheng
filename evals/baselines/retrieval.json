@@ -1,0 +1,33 @@
+{
+  "mode": "retrieval",
+  "measuredAt": "2026-11-03T11:53:17.310Z",
+  "commit": "d9826163b480f8f0ceddf4087fd77ad6d02f0c69",
+  "dirty": true,
+  "note": "Measured with the integration working tree before its commit; compact export of actual Promptfoo results. No generated answers or semantic judge were evaluated.",
+  "corpusSha256": "6e3cc676527750588d4ce3140318bdb4f87c8f08fe0bf011299a27f3ded8d48e",
+  "casesSha256": "8ca10346140f5aa80d2ed78e3b31598470901ab31a1c64e805b3f1f470d51e80",
+  "rerank": false,
+  "rerankModel": null,
+  "model": null,
+  "judge": null,
+  "semanticSupportAttempted": false,
+  "semanticSupportMeasured": false,
+  "semanticEvaluatedCases": 0,
+  "semanticUnmeasuredCases": 10,
+  "fixtureType": "synthetic controlled corpus; natural-language research questions",
+  "summary": {
+    "stats": { "successes": 10, "failures": 0, "errors": 0, "durationMs": 143 },
+    "results": [
+      { "id": "battery-method", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 3 } },
+      { "id": "rice-indicators", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "gnn-english", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "cold-chain", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "rrf-rerank", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "ocr-layout", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "multi-source", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "unsupported-number", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "unsupported-generalization", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } },
+      { "id": "direct-injection", "success": true, "namedScores": { "recall_at_5": 1, "mrr": 1, "retrieval_ms": 1 } }
+    ]
+  }
+}

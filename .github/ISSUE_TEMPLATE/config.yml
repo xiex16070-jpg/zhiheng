@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞私密报告 (Security Policy)
+    url: https://github.com/xiex16070-jpg/zhiheng/blob/main/SECURITY.md
+    about: 涉及凭据、权限绕过、路径穿越或审批失效等问题请勿公开披露
+  - name: 功能手册与 Beta 验收范围
+    url: https://github.com/xiex16070-jpg/zhiheng/blob/main/docs/release-kit/features.md
+    about: 查看操作入口、已知限制与待验证的外部服务清单
+  - name: 社区扩展指南
+    url: https://github.com/xiex16070-jpg/zhiheng/blob/main/docs/release-kit/community.md
+    about: 了解技能包、MCP 连接器、模型对照与评测贡献方式

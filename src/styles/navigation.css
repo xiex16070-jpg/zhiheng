@@ -1,0 +1,94 @@
+/* Workspace navigation stays separate from the scrolling document catalog. */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 16px;
+  padding: 20px 16px 0;
+}
+.sidebar-top { flex: none; }
+.sidebar-top .new-chat { margin: 0 0 12px; }
+.sidebar-tools { display: grid; gap: 3px; }
+.sidebar-tools .toolbar-button {
+  width: 100%;
+  min-height: 42px;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.sidebar-tools .toolbar-button > .ui-icon:first-child { color: var(--accent); }
+.sidebar-tools .toolbar-button > .ui-icon:last-child { margin-left: auto; opacity: .6; }
+.sidebar-tools .toolbar-button:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+.sidebar-scroll { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 20px; scrollbar-gutter: stable; }
+.sidebar-footer { flex: none; margin: 0 -16px; padding: 12px 16px 16px; border-top: 1px solid var(--line); background: var(--surface-2); }
+.sidebar-settings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--control-face);
+  color: var(--ink-2);
+  box-shadow: var(--control-inset), var(--control-shadow);
+  font: 500 13px var(--sans);
+}
+.sidebar-settings > .ui-icon:first-child { color: var(--accent); }
+.sidebar-settings > .ui-icon:last-child { margin-left: auto; color: var(--muted); }
+.sidebar-settings:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.sidebar-settings:focus-visible, .configuration-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.app-settings { overflow: clip; }
+.configuration-panel { max-width: 720px; display: flex; flex-direction: column; overflow: hidden; }
+.configuration-panel > .modal-head { flex: none; background: var(--surface); }
+.app-settings .modal-head h2 { display: flex; align-items: center; gap: 9px; }
+.configuration-body { display: grid; gap: 22px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.configuration-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.configuration-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 11px;
+  min-height: 78px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  text-align: left;
+}
+.configuration-link > .ui-icon:first-child { flex: none; color: var(--accent); }
+.configuration-link > .ui-icon:last-child { margin-left: auto; flex: none; color: var(--muted); }
+.configuration-link span { min-width: 0; }
+.configuration-link strong { display: block; font: 600 13px var(--sans); }
+.configuration-link small { display: block; margin-top: 4px; color: var(--muted); font: 12px/1.5 var(--sans); overflow-wrap: anywhere; }
+.configuration-link:hover { border-color: var(--accent-line); background: var(--accent-soft); }
+.configuration-theme { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.configuration-theme h3 { margin: 0; font: 600 14px var(--serif); }
+.configuration-theme-options { display: flex; gap: 7px; }
+.configuration-theme-options button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+#settings-preferences-slot zh-preferences { margin: 0; }
+#settings-preferences-slot .pref-card { box-shadow: none; }
+#settings-preferences-slot .pref-choices { flex-wrap: wrap; }
+.research-context { color: var(--muted); margin: 20px 0; font-size: 13px; line-height: 1.7; }
+@media (max-width: 1180px) {
+  .sidebar { display: flex; padding-top: 14px; gap: 12px; }
+  .sidebar-mobile-head { flex: none; margin-bottom: 2px; }
+  .sidebar-tools .toolbar-button { min-height: 44px; }
+}
+@media (max-width: 760px) {
+  :root { --header-height: 72px; }
+  .topbar { flex-wrap: nowrap; align-content: center; }
+  .configuration-links { grid-template-columns: 1fr; }
+  .configuration-link { min-height: 60px; }
+  .configuration-body { gap: 18px; }
+}

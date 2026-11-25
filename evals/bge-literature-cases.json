@@ -1,0 +1,472 @@
+{
+  "version": "bge-literature-20261107-v1",
+  "frozenBeforeSemanticRun": true,
+  "source": "Bundled MIT Software Foundations textbook snapshot",
+  "labelPolicy": "Exact parent section anchors; alternate valid sections are not exhaustively annotated.",
+  "cases": [
+    {
+      "id": "prop-zh",
+      "question": "为什么一个语句的类型是 Prop，并不说明它已经被证明？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "102332924723851",
+          "quote": "所有语法形式良好的命题，无论是否为真，其类型均为 [Prop]。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L3-L84",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "678ebdad786f09eed765eb7449ab5043fb6186a34679dbec887d5d5b8b6ad08d",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "prop-en",
+      "question": "Does having the type Prop establish that a proposition is provable?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "102332924723851",
+          "quote": "所有语法形式良好的命题，无论是否为真，其类型均为 [Prop]。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L3-L84",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "678ebdad786f09eed765eb7449ab5043fb6186a34679dbec887d5d5b8b6ad08d",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "conjunction-zh",
+      "question": "同时证明两个断言时，split 会创建怎样的证明目标？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "58865390884868",
+          "quote": "证明合取的命题通常使用 [split] 策略。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L92-L124",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "e8333f4e2c967f3a5c60af2df6806e575f894ba0be1669161a09fa3e647d207e",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "conjunction-en",
+      "question": "How does split divide the obligation when proving a conjunction?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "58865390884868",
+          "quote": "证明合取的命题通常使用 [split] 策略。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L92-L124",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "e8333f4e2c967f3a5c60af2df6806e575f894ba0be1669161a09fa3e647d207e",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "disjunction-zh",
+      "question": "为了确立两个选项的逻辑或，是否必须把两边都证明出来？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "231914346140957",
+          "quote": "相应地，要证明某个析取命题成立，只需证明其任意一边的命题成立就够了。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L237-L279",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "f0f8e6f3d51188ec27623005989e1acfba6b0842cafb7f7611691c9ad6d304fe",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "disjunction-en",
+      "question": "Must both alternatives be proved in order to establish a logical disjunction?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "231914346140957",
+          "quote": "相应地，要证明某个析取命题成立，只需证明其任意一边的命题成立就够了。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L237-L279",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "f0f8e6f3d51188ec27623005989e1acfba6b0842cafb7f7611691c9ad6d304fe",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "negation-zh",
+      "question": "在 Coq 中，否定一个命题如何用蕴含和矛盾表达？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "932719006441",
+          "quote": "它将 [~ P] 定义为 [P -> False]",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L295-L330",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "bc624e1a7226730232c71979f98493f7a2c7e722361e0c2a2c2ec55fca0d2964",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "negation-en",
+      "question": "How is logical negation expressed as implication to contradiction in Coq?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "932719006441",
+          "quote": "它将 [~ P] 定义为 [P -> False]",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L295-L330",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "bc624e1a7226730232c71979f98493f7a2c7e722361e0c2a2c2ec55fca0d2964",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "iff-zh",
+      "question": "双向等价关系由哪两个方向的条件共同组成？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "78512554949129",
+          "quote": "它是两个蕴含式的合取",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L476-L507",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "f1df50a7e24aee2053953ddae7143b9cdf1942ab0c3e0c22781b210c3ff6f77a",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "iff-en",
+      "question": "What two implication directions make up an if-and-only-if proposition?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "78512554949129",
+          "quote": "它是两个蕴含式的合取",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L476-L507",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "f1df50a7e24aee2053953ddae7143b9cdf1942ab0c3e0c22781b210c3ff6f77a",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "existence-zh",
+      "question": "证明有某个对象满足条件时，为什么需要给出一个具体见证？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "237253936229027",
+          "quote": "这些特定的 [x] 被称作存在性的例证。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L597-L625",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "e5de86e4990aa9593af188a8646bc7a2d37a243ebc55273fe911e32d8d8e46dd",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "existence-en",
+      "question": "Why is a concrete witness required to establish an existential proposition?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "237253936229027",
+          "quote": "这些特定的 [x] 被称作存在性的例证。",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L597-L625",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "e5de86e4990aa9593af188a8646bc7a2d37a243ebc55273fe911e32d8d8e46dd",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "extensionality-zh",
+      "question": "两个函数在所有输入上的结果一致，Coq 核心是否自动接受它们相等？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "188849238155411",
+          "quote": "函数的外延性并不在 Coq 的基本公理之内",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L955-L1016",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "3daa2b22ce1ea94643b3c61b9b637f022b2c93435a9ce2d51919b7c7031ed178",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "extensionality-en",
+      "question": "Is functional extensionality automatically part of the basic axioms of Coq?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "188849238155411",
+          "quote": "函数的外延性并不在 Coq 的基本公理之内",
+          "sourcePath": "lf-current/Logic.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L955-L1016",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "3daa2b22ce1ea94643b3c61b9b637f022b2c93435a9ce2d51919b7c7031ed178",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "hoare-zh",
+      "question": "霍尔三元组的后置条件保证是否依赖程序运行到结束状态？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "109689241609273",
+          "quote": "最终在一个结束状态停机，这个结束状态会满足断言 [Q]。",
+          "sourcePath": "plf-current/Hoare.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L221-L252",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "d25b794ecc2bb7bb27213c528d23ac8895ed588ffb69da91c5f28ed18283b285",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "hoare-en",
+      "question": "What does a Hoare triple promise about the final state if execution terminates?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "109689241609273",
+          "quote": "最终在一个结束状态停机，这个结束状态会满足断言 [Q]。",
+          "sourcePath": "plf-current/Hoare.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L221-L252",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "d25b794ecc2bb7bb27213c528d23ac8895ed588ffb69da91c5f28ed18283b285",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "invariant-zh",
+      "question": "把循环不变量加强，为什么既有帮助又增加证明难度？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "187965144734440",
+          "quote": "strengthening the loop invariant",
+          "sourcePath": "plf-current/Hoare2.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L366-L378",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "8cbb749470bd1c20139bb168b9e69131cad7629065ce95a5adfa3cec380394f2",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "invariant-en",
+      "question": "Why can strengthening a loop invariant help the proof and also make it harder?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "187965144734440",
+          "quote": "strengthening the loop invariant",
+          "sourcePath": "plf-current/Hoare2.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L366-L378",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "8cbb749470bd1c20139bb168b9e69131cad7629065ce95a5adfa3cec380394f2",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "weakest-zh",
+      "question": "怎样用所有有效前置断言的蕴含关系定义最弱前置条件？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "247775204521692",
+          "quote": "[P] is the weakest precondition",
+          "sourcePath": "plf-current/Hoare2.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L958-L997",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "15bff6d301eaccb524d0a8a762f1b6e1c4365057e95a8b057f037b26e20d92c8",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "weakest-en",
+      "question": "How is the weakest precondition characterized relative to every other valid precondition?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "247775204521692",
+          "quote": "[P] is the weakest precondition",
+          "sourcePath": "plf-current/Hoare2.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L958-L997",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "15bff6d301eaccb524d0a8a762f1b6e1c4365057e95a8b057f037b26e20d92c8",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "smallstep-zh",
+      "question": "为什么语义模型必须区分无限循环与执行到错误位置而卡住？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "11833269663900",
+          "quote": "这两种结果——非停机状态 vs. 在错误的结构上卡住（stuck）——不应当被混淆。",
+          "sourcePath": "plf-current/Smallstep.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L1-L46",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "56eb48e1a4830081c36cc89e0fd2cf0458d25f7b71daeb7281772b2f21eb3571",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "smallstep-en",
+      "question": "Why distinguish divergence from getting stuck on an undefined operation?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "11833269663900",
+          "quote": "这两种结果——非停机状态 vs. 在错误的结构上卡住（stuck）——不应当被混淆。",
+          "sourcePath": "plf-current/Smallstep.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L1-L46",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "56eb48e1a4830081c36cc89e0fd2cf0458d25f7b71daeb7281772b2f21eb3571",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "progress-zh",
+      "question": "玩具算术语言的强可进性定理如何排除非值却不能再归约的项？",
+      "language": "zh",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "164589955219155",
+          "quote": "要么是一个值，要么存在项 [t'] 使 [t --> t']。",
+          "sourcePath": "plf-current/Smallstep.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L394-L485",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "422b2f2665f7fef3b3e6c39f14690fd9dc24da8254fe790e6b66b5b611f4b19d",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "progress-en",
+      "question": "What does strong progress say about a term that is not already a value?",
+      "language": "en",
+      "expectInsufficient": false,
+      "anchors": [
+        {
+          "ref": "164589955219155",
+          "quote": "要么是一个值，要么存在项 [t'] 使 [t --> t']。",
+          "sourcePath": "plf-current/Smallstep.v",
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L394-L485",
+          "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+          "contentSha256": "422b2f2665f7fef3b3e6c39f14690fd9dc24da8254fe790e6b66b5b611f4b19d",
+          "license": "MIT"
+        }
+      ],
+      "labelProvenance": "AI-authored; original text anchor verified; not human-labeled"
+    },
+    {
+      "id": "unsupported-medical",
+      "question": "该教材能给出儿童流感药物的当前临床剂量吗？",
+      "language": "zh",
+      "expectInsufficient": true,
+      "anchors": [],
+      "labelProvenance": "AI-authored domain mismatch control; not human-labeled"
+    },
+    {
+      "id": "unsupported-weather",
+      "question": "What will the weather in Shanghai be next Tuesday?",
+      "language": "en",
+      "expectInsufficient": true,
+      "anchors": [],
+      "labelProvenance": "AI-authored domain mismatch control; not human-labeled"
+    },
+    {
+      "id": "unsupported-benchmark",
+      "question": "这个知识库中最新发布的 Qwen3 模型在 MMLU-Pro 上的分数是多少？",
+      "language": "zh",
+      "expectInsufficient": true,
+      "anchors": [],
+      "labelProvenance": "AI-authored domain mismatch control; not human-labeled"
+    },
+    {
+      "id": "unsupported-clinical",
+      "question": "What is the current clinical recommendation for treating a bee sting allergy?",
+      "language": "en",
+      "expectInsufficient": true,
+      "anchors": [],
+      "labelProvenance": "AI-authored domain mismatch control; not human-labeled"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+name: Windows desktop package
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main']
+    tags: ['v*.*.*', 'v*.*.*-*']
+    paths:
+      - 'scripts/windows/**'
+      - 'scripts/*windows*.py'
+      - 'scripts/launch.mjs'
+      - 'scripts/stop.mjs'
+      - 'scripts/runtime-client.mjs'
+      - 'src/**'
+      - 'server.mjs'
+      - 'package*.json'
+      - '.github/workflows/windows-package.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build portable Windows x64 package
+        run: python scripts/package-windows.py --ref HEAD --output "$env:RUNNER_TEMP/zhiheng-release"
+      - name: Boot, search, stop and reopen the package
+        shell: pwsh
+        run: |
+          $version = (Get-Content package.json -Raw | ConvertFrom-Json).version
+          $zip = Join-Path $env:RUNNER_TEMP "zhiheng-release/Zhiheng-$version-windows-x64.zip"
+          $digest = ((Get-Content "$zip.sha256" -Raw) -split '\s+')[0]
+          $commit = git rev-parse HEAD
+          python scripts/verify-windows-release.py $zip --sha256 $digest --version $version --commit $commit

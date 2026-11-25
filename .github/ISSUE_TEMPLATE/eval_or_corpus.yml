@@ -1,0 +1,39 @@
+name: 评测样本 / 公开语料 / 真实模型对照
+description: 提交公开授权语料、PDF 版面样本、留出评测集或模型能力对照结果
+title: "[Eval/Corpus]: "
+labels: ["eval"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 提交类型
+      options:
+        - 公开授权语料 / 教材片段
+        - PDF 版面与原文定位样本
+        - 模型工具调用与引用能力对照
+        - 人工双盲标注 / 留出评测集
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: 来源、版本与再分发许可
+      description: 必须写明原始出处、固定版本/哈希与明确的公开再分发许可，拒绝未获授权的私有或侵权语料
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 复现命令与对照条件
+      description: 写明环境、模型版本、输入前态与可运行命令；分别记录原始输出、解析结果与最终任务结果
+    validations:
+      required: true
+  - type: checkboxes
+    id: honesty
+    attributes:
+      label: 评测口径确认
+      options:
+        - label: 已明确区分真实调用、模拟夹具、跳过项与待人工复核项
+          required: true
+        - label: 所有样本均已确认允许公开再分发，且不含个人隐私数据
+          required: true

@@ -1,0 +1,66 @@
+name: 缺陷反馈 (Bug Report)
+description: 报告运行故障、界面异常、引用定位错误或审批/权限问题（安全漏洞请走 SECURITY.md）
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请先脱敏，**切勿粘贴真实 API Key、会话 Cookie、本机隐私路径或私人对话**。
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: 运行方式
+      options:
+        - Windows x64 便携版 (Zhiheng.exe)
+        - 源码运行 (Node.js)
+        - MCP 服务 (npm run mcp / HTTP /mcp)
+        - 评测或脚本工具
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本与环境
+      description: 例如 v3.1.0-beta.1 / Windows 11 x64 / Node 24.14.1 / Chrome 131
+      placeholder: v3.1.0-beta.1, Windows 11 x64, Node ...
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: 模型与外部服务（如涉及）
+      description: 写明提供方类型（如 DeepSeek / 百炼 / Ollama / 脚本模型）及是否开启联合研究、MCP、BGE 或 MinerU
+      placeholder: 无模型 / Ollama Qwen3-8B / ...
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 请提供最小可复现输入与操作顺序（优先使用内置教材或最小合成样本）
+      placeholder: |
+        1. 打开 ...
+        2. 输入或点击 ...
+        3. 观察到 ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 脱敏日志或截图
+      description: 粘贴脱敏后的终端输出、`data/server.log` 片段或界面截图
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前自查
+      options:
+        - label: 已确认内容不包含 API Key、凭据、Cookie 或个人隐私文件
+          required: true
+        - label: 已确认这不是未披露的安全漏洞（安全漏洞请遵循 SECURITY.md）
+          required: true

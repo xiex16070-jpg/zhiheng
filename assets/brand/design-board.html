@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>文献 Agent · 视觉设计板</title>
+  <link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ee; --surface: #fff; --surface-2: #fbfaf6; --ink: #1a1917;
+      --muted: #6e685e; --line: #e4dfd3; --accent: #1d5a54; --accent-soft: #e7f0ed;
+      --amber: #9a5a12; --amber-soft: #fbf1de;
+      --sans: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "SimSun", Georgia, serif;
+      --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #171614; --surface: #201e1b; --surface-2: #262320; --ink: #ece7dd;
+      --muted: #b0a89b; --line: #3a352e; --accent: #6fbfae; --accent-soft: #1e3a34;
+      --amber: #e0a458; --amber-soft: #33291a;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 14px/1.7 var(--sans); }
+    a { color: inherit; text-underline-offset: 4px; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+    .ui-icon, .brand-symbol { display: inline-block; flex: none; vertical-align: middle; }
+    .wrap { width: min(1192px, calc(100% - 96px)); margin: auto; }
+    .masthead { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .wordmark { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .wordmark strong { display: block; font: 600 18px/1.4 var(--serif); }
+    .wordmark small { display: block; margin-top: 3px; font: 9px/1.5 var(--mono); letter-spacing: 1.8px; color: var(--muted); }
+    .theme-toggle { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 100px; background: var(--surface); color: var(--ink); white-space: nowrap; font-size: 12px; }
+    .hero { display: grid; grid-template-columns: 1fr 1.12fr; align-items: center; gap: 24px; padding: 64px 0 50px; }
+    .eyebrow { color: var(--accent); font: 10px/1.7 var(--mono); letter-spacing: 2px; text-transform: uppercase; }
+    h1 { font: 500 clamp(34px, 4vw, 51px)/1.45 var(--serif); letter-spacing: -1px; margin: 20px 0 22px; }
+    .intro { max-width: 390px; color: var(--muted); margin: 0; line-height: 1.95; }
+    .hero-meta { display: flex; gap: 24px; margin: 28px 0 0; font: 10px/1.8 var(--mono); color: var(--muted); }
+    .hero-meta b { display: block; color: var(--ink); font-size: 16px; font-weight: 500; }
+    .artwork { margin: 0; position: relative; min-width: 0; }
+    .artwork::before { content: ""; position: absolute; inset: 12% 6%; border: 1px solid var(--line); border-radius: 50%; z-index: -1; }
+    .artwork img { display: block; width: 100%; height: auto; }
+    .artwork figcaption { display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--muted); font-size: 11px; margin-top: 3px; }
+    .evidence-dot { width: 5px; height: 5px; border-radius: 50%; background: #c88f39; flex: none; }
+    .index { display: flex; flex-wrap: wrap; gap: 12px 26px; padding: 17px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .index a { text-decoration: none; font-size: 12px; }
+    .index a:hover { color: var(--accent); }
+    .index span { font: 10px var(--mono); color: var(--muted); margin-right: 7px; }
+    section { padding: 44px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 20px; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin-bottom: 25px; }
+    .section-head h2 { margin: 0; font: 500 25px/1.5 var(--serif); }
+    .section-head h2 span { font: 11px var(--mono); color: var(--accent); margin-right: 15px; vertical-align: middle; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 12px; }
+    .brand-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
+    .brand-stage { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 26px; padding: 34px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .brand-stage h3 { font: 500 26px var(--serif); margin: 0 0 10px; }
+    .brand-stage p { margin: 0; color: var(--muted); font-size: 12px; max-width: 240px; }
+    .mark-sizes { display: flex; align-items: end; justify-content: space-around; gap: 18px; padding: 30px 20px; border-bottom: 1px solid var(--line); }
+    .mark-sizes figure { margin: 0; display: flex; align-items: center; flex-direction: column; gap: 13px; }
+    .mark-sizes figcaption { font: 10px var(--mono); color: var(--muted); white-space: nowrap; }
+    .brand-note { margin: 15px 0 0; color: var(--muted); font-size: 12px; }
+    .brand-note a { color: var(--accent); }
+    .swatches { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+    .swatch { min-width: 0; }
+    .swatch-color { height: 74px; border-radius: 7px; border: 1px solid rgba(90, 80, 60, .12); }
+    .swatch strong { display: block; font-size: 12px; font-weight: 500; margin: 10px 0 1px; }
+    .swatch code { font: 10px var(--mono); color: var(--muted); }
+    .palette-note { color: var(--muted); margin: 20px 0 0; font-size: 12px; }
+    .icon-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 17px; }
+    .search-box { display: flex; align-items: center; gap: 9px; width: 290px; max-width: 100%; color: var(--muted); border-bottom: 1px solid var(--line); padding: 6px 0; }
+    .search-box input { padding: 5px 0; min-width: 0; width: 100%; border: 0; outline-offset: 2px; background: transparent; color: var(--ink); font-size: 12px; }
+    .icon-count { color: var(--muted); font: 10px var(--mono); white-space: nowrap; }
+    .icon-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--line); }
+    .icon-grid[hidden] { display: none; }
+    .icon-tile { display: flex; align-items: center; flex-direction: column; justify-content: center; min-width: 0; min-height: 116px; padding: 18px 6px 15px; background: var(--surface); color: var(--accent); }
+    .icon-tile[hidden] { display: none; }
+    .icon-tile:hover { background: var(--accent-soft); }
+    .icon-tile code { margin-top: 14px; font: 10px/1.5 var(--mono); color: var(--ink); overflow-wrap: anywhere; text-align: center; }
+    .icon-tile small { margin-top: 2px; font-size: 10px; color: var(--muted); text-align: center; }
+    .empty-search { padding: 30px; margin: 0; color: var(--muted); text-align: center; }
+    .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+    .principle h3 { font-size: 14px; font-weight: 500; margin: 15px 0 7px; }
+    .principle p { color: var(--muted); font-size: 12px; line-height: 1.9; margin: 0; }
+    .sample { display: inline-flex; gap: 9px; align-items: center; min-height: 38px; color: var(--accent); padding: 7px 12px; background: var(--accent-soft); border-radius: 7px; font-size: 12px; }
+    .sample.amber { color: var(--amber); background: var(--amber-soft); }
+    .loader-demo { animation: spin 1.1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .api-note { display: flex; align-items: start; gap: 24px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 24px; }
+    .api-note span { color: var(--muted); font: 10px var(--mono); padding-top: 5px; }
+    .api-note code { color: var(--accent); font: 12px/1.9 var(--mono); overflow-wrap: anywhere; }
+    .footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 0 36px; font-size: 11px; color: var(--muted); }
+    .footer a { color: var(--accent); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    @media (max-width: 850px) {
+      .wrap { width: calc(100% - 48px); }
+      .hero { gap: 0; padding: 42px 0; }
+      h1 { font-size: 34px; }
+      .icon-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .brand-grid { grid-template-columns: 1fr; }
+      .brand-stage { padding: 25px; }
+      .mark-sizes { justify-content: start; gap: 48px; padding: 20px 0; }
+      .principles { gap: 20px; }
+    }
+    @media (max-width: 580px) {
+      .wrap { width: calc(100% - 36px); }
+      .masthead { padding: 20px 0; }
+      .wordmark strong { font-size: 16px; }
+      .wordmark small { font-size: 8px; letter-spacing: 1px; }
+      .theme-toggle { padding: 9px 10px; font-size: 11px; }
+      .hero { grid-template-columns: 1fr; padding: 35px 0 24px; gap: 17px; }
+      h1 { margin: 15px 0; font-size: clamp(30px, 8vw, 42px); }
+      .intro { font-size: 13px; max-width: none; }
+      .hero-meta { gap: 25px; margin-top: 20px; }
+      .artwork { max-width: 480px; width: 100%; justify-self: center; }
+      .artwork figcaption { font-size: 10px; }
+      .index { gap: 12px 18px; }
+      .index a { font-size: 11px; }
+      section { padding: 30px 0; }
+      .section-head { display: block; margin-bottom: 20px; }
+      .section-head h2 { font-size: 22px; }
+      .section-head p { margin: 7px 0 0 30px; font-size: 11px; }
+      .brand-stage { gap: 20px; padding: 22px; }
+      .brand-stage > img { width: 64px; height: 64px; }
+      .brand-stage h3 { font-size: 22px; }
+      .brand-stage p { font-size: 11px; }
+      .mark-sizes { justify-content: space-around; gap: 16px; }
+      .swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 10px; }
+      .swatch-color { height: 60px; }
+      .icon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .icon-tile { min-height: 107px; }
+      .icon-toolbar { gap: 12px; }
+      .principles { grid-template-columns: 1fr; gap: 24px; }
+      .principle h3 { margin-top: 10px; }
+      .api-note { flex-direction: column; gap: 10px; }
+      .api-note code { font-size: 11px; }
+      .footer { flex-direction: column; align-items: start; gap: 7px; padding: 24px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .loader-demo { animation: none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="返回文献 Agent">
+        <img src="/assets/brand/mark.svg" width="36" height="36" alt="" />
+        <span><strong>文献 Agent</strong><small>VISUAL FIELD NOTES</small></span>
+      </a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="开启深色主题">切换主题</button>
+    </header>
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Art direction / 2026.11</div>
+          <h1>让每一条结论，<br />都有迹可循。</h1>
+          <p class="intro">书页承载知识，连线指向证据。以温润的纸张、沉静的青绿和克制的线条，为文献阅读与研究留出空间。</p>
+          <div class="hero-meta"><div><b id="total-count">46</b>原生 SVG 图标</div><div><b>24 × 24</b>统一绘制网格</div><div><b>1.6</b>基础线宽</div></div>
+        </div>
+        <figure class="artwork">
+          <img src="/assets/illustrations/research-library.png" width="1536" height="1024" alt="打开的书籍、文献卡片和银杏叶，以琥珀色连线连接原文与证据。" fetchpriority="high" />
+          <figcaption><span class="evidence-dot"></span>原创研究插画 · 透明背景 · 1536 × 1024</figcaption>
+        </figure>
+      </div>
+      <nav class="index" aria-label="设计板章节">
+        <a href="#identity"><span>01</span>品牌标识</a><a href="#palette"><span>02</span>色彩</a><a href="#icons"><span>03</span>图标全集</a><a href="#behavior"><span>04</span>使用与动效</a>
+      </nav>
+      <section id="identity" aria-labelledby="identity-heading">
+        <div class="section-head"><h2 id="identity-heading"><span>01</span>书页与证据</h2><p>一个标识，从浏览器标签到会话头像。</p></div>
+        <div class="brand-grid">
+          <div class="brand-stage"><img src="/assets/brand/mark.svg" width="92" height="92" alt="文献 Agent 品牌标识" /><div><h3>有所依据</h3><p>展开的书页与右上角的证据点，表达知识与可追溯的关联。</p></div></div>
+          <div><div class="mark-sizes"><figure><img src="/assets/brand/mark.svg" width="64" height="64" alt="" /><figcaption>64 px</figcaption></figure><figure><img src="/assets/brand/mark.svg" width="40" height="40" alt="" /><figcaption>40 px</figcaption></figure><figure><img src="/assets/brand/mark.svg" width="28" height="28" alt="" /><figcaption>28 px</figcaption></figure><figure><img src="/assets/brand/mark.svg" width="16" height="16" alt="" /><figcaption>16 px</figcaption></figure></div><p class="brand-note">品牌保持固有色；交互图标随文字切换主题。<a href="/assets/brand/mark.svg">查看 SVG 源图</a></p></div>
+        </div>
+      </section>
+      <section id="palette" aria-labelledby="palette-heading">
+        <div class="section-head"><h2 id="palette-heading"><span>02</span>纸张、青绿、琥珀</h2><p>大面积留白，少量强调。</p></div>
+        <div class="swatches">
+          <div class="swatch"><div class="swatch-color" style="background:#1d5a54"></div><strong>深青 · 品牌主色</strong><code>#1D5A54</code></div>
+          <div class="swatch"><div class="swatch-color" style="background:#f5f3ee"></div><strong>纸白 · 页面底色</strong><code>#F5F3EE</code></div>
+          <div class="swatch"><div class="swatch-color" style="background:#fffaf0"></div><strong>象牙 · 书页线条</strong><code>#FFFAF0</code></div>
+          <div class="swatch"><div class="swatch-color" style="background:#e7b86b"></div><strong>琥珀 · 证据点</strong><code>#E7B86B</code></div>
+          <div class="swatch"><div class="swatch-color" style="background:#1a1917"></div><strong>墨色 · 正文</strong><code>#1A1917</code></div>
+          <div class="swatch"><div class="swatch-color" style="background:#6fbfae"></div><strong>浅青 · 深色强调</strong><code>#6FBFAE</code></div>
+        </div>
+        <p class="palette-note">琥珀色证据点用于图形点缀；提示文字使用更深的琥珀色。状态始终同时提供图标与文字。</p>
+      </section>
+      <section id="icons" aria-labelledby="icons-heading">
+        <div class="section-head"><h2 id="icons-heading"><span>03</span>同一套视觉语言</h2><p>圆角描边 · currentColor · 无字体符号依赖</p></div>
+        <div class="icon-toolbar"><label class="search-box"><span id="search-icon" aria-hidden="true"></span><span class="sr-only">按名称或用途查找图标</span><input id="icon-search" type="search" placeholder="按名称或用途查找" autocomplete="off" /></label><span class="icon-count" id="icon-count" role="status" aria-live="polite">46 / 46</span></div>
+        <div class="icon-grid" id="icon-grid" aria-label="图标目录"></div>
+        <p id="empty-search" class="empty-search" hidden>没有匹配的图标，请尝试其他名称。</p>
+        <noscript><p>图标目录需要启用 JavaScript，以加载产品共用的 SVG 模块。</p></noscript>
+      </section>
+      <section id="behavior" aria-labelledby="behavior-heading">
+        <div class="section-head"><h2 id="behavior-heading"><span>04</span>清晰，先于装饰</h2><p>状态有依据，动效有边界。</p></div>
+        <div class="principles">
+          <article class="principle"><div class="sample" id="source-sample"></div><h3>让来源可以辨认</h3><p>文档、论文与外部链接使用明确的语义图标，始终保留可读标签，帮助用户找到原文。</p></article>
+          <article class="principle"><div class="sample" id="motion-sample"></div><h3>仅反馈真实状态</h3><p>上方为运行图标的动效示意。产品中仅在执行任务时旋转；系统要求减少动态效果时，保留静态图标与状态文字。</p></article>
+          <article class="principle"><div class="sample amber" id="evidence-sample"></div><h3>保持阅读连续</h3><p>新消息、引用卡片和阅读面板轻量过渡。不为每个流式文字片段重复触发入场动画。</p></article>
+        </div>
+        <div class="api-note"><span>SHARED API</span><code>icon('book', { size: 18 })<br />brandMark({ size: 28 })</code></div>
+      </section>
+    </main>
+    <footer class="footer"><span>文献 Agent · 原创视觉资源 / 2026-11-03</span><span><a href="/assets/README.md">资源说明与使用规范</a> &nbsp;·&nbsp; <a href="/">返回应用</a></span></footer>
+  </div>
+  <script type="module">
+    import { icon, ICON_NAMES } from '/src/ui/icons.js';
+
+    const meanings = {
+      plus: '新建', upload: '导入文档', folder: '工作区', learning: '学习与记忆', activity: '运行监控',
+      sun: '浅色主题', moon: '深色主题', send: '发送', stop: '停止执行', copy: '复制', retry: '重试',
+      download: '下载', eye: '预览', check: '完成', close: '关闭', warning: '警告', clock: '等待',
+      loader: '正在执行', pause: '暂停', search: '检索', quote: '引用', book: '论文与阅读', document: '文档',
+      settings: '设置', database: '数据源', layers: '上下文', inference: '推断', external: '外部链接',
+      trash: '删除', 'chevron-right': '进入与展开', 'chevron-down': '下拉与展开', archive: '归档', pin: '置顶',
+      undo: '恢复', refresh: '刷新', edit: '编辑', terminal: '命令执行', info: '信息', 'file-code': '代码文件',
+      user: '用户', flask: '材料与实验', chip: '计算机与工程', heart: '医学与健康', leaf: '生命与环境',
+      building: '土木与建筑', chart: '经济与数据',
+    };
+    const grid = document.querySelector('#icon-grid');
+    for (const name of ICON_NAMES) {
+      const tile = document.createElement('div');
+      tile.className = 'icon-tile';
+      tile.dataset.name = name;
+      tile.innerHTML = icon(name, { size: 25 });
+      const label = document.createElement('code');
+      label.textContent = name;
+      const meaning = document.createElement('small');
+      meaning.textContent = meanings[name] || '界面操作';
+      tile.append(label, meaning);
+      grid.append(tile);
+    }
+    document.querySelector('#total-count').textContent = ICON_NAMES.length;
+    const count = document.querySelector('#icon-count');
+    count.textContent = `${ICON_NAMES.length} / ${ICON_NAMES.length}`;
+    document.querySelector('#search-icon').innerHTML = icon('search', { size: 16 });
+    document.querySelector('#source-sample').innerHTML = `${icon('book', { size: 17 })}<span>阅读原文</span>`;
+    document.querySelector('#motion-sample').innerHTML = `${icon('loader', { size: 17, className: 'loader-demo' })}<span>运行状态 · 动效示意</span>`;
+    document.querySelector('#evidence-sample').innerHTML = `${icon('quote', { size: 17 })}<span>回到证据</span>`;
+    document.querySelector('#icon-search').addEventListener('input', (event) => {
+      const query = event.currentTarget.value.trim().toLowerCase();
+      let shown = 0;
+      for (const tile of grid.children) {
+        tile.hidden = !`${tile.dataset.name} ${meanings[tile.dataset.name] || ''}`.toLowerCase().includes(query);
+        if (!tile.hidden) shown += 1;
+      }
+      count.textContent = `${shown} / ${ICON_NAMES.length}`;
+      grid.hidden = shown === 0;
+      document.querySelector('#empty-search').hidden = shown !== 0;
+    });
+
+    const themeButton = document.querySelector('#theme-toggle');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    let manuallySelected = false;
+    function setTheme(dark) {
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      themeButton.setAttribute('aria-pressed', String(dark));
+      themeButton.setAttribute('aria-label', dark ? '切换到浅色主题' : '切换到深色主题');
+      themeButton.innerHTML = `${icon(dark ? 'sun' : 'moon', { size: 15 })}<span>${dark ? '浅色预览' : '深色预览'}</span>`;
+    }
+    setTheme(systemTheme.matches);
+    themeButton.addEventListener('click', () => {
+      manuallySelected = true;
+      setTheme(document.documentElement.dataset.theme !== 'dark');
+    });
+    systemTheme.addEventListener('change', (event) => { if (!manuallySelected) setTheme(event.matches); });
+  </script>
+</body>
+</html>

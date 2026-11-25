@@ -1,0 +1,15 @@
+/** Pair immutable report artifacts; never rerun or modify a case. */
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const args=process.argv.slice(2),value=key=>args[args.indexOf(key)+1];
+if(!['--baseline','--candidate','--output'].every(k=>args.includes(k)))throw Error('Require --baseline REPORT --candidate REPORT --output NEW_REPORT');
+const files=[value('--baseline'),value('--candidate')],raw=await Promise.all(files.map(f=>fs.readFile(f,'utf8'))),[baseline,candidate]=raw.map(JSON.parse),hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+for(const report of [baseline,candidate])if(report.status!=='completed'||report.metrics.channelErrorCases!==0||report.metrics.channelSuccessCoverage!==1)throw Error('Incomplete or degraded retrieval run is not comparable');
+if(baseline.caseSetSha256!==candidate.caseSetSha256||baseline.corpusSha256!==candidate.corpusSha256||JSON.stringify(baseline.cases.map(c=>[c.id,c.question]))!==JSON.stringify(candidate.cases.map(c=>[c.id,c.question])))throw Error('Case/corpus mismatch');
+const pairs=baseline.cases.map((b,i)=>{const c=candidate.cases[i];return {id:b.id,question:b.question,language:b.language,expectInsufficient:b.expectInsufficient,baseline:{rank:b.rank,weak:b.weak},candidate:{rank:c.rank,weak:c.weak},mrrDelta:c.reciprocalRank-b.reciprocalRank}}),positive=pairs.filter(p=>!p.expectInsufficient),negative=pairs.filter(p=>p.expectInsufficient);
+const keys=['anchorHitAt5','anchorMrrAt5','anchorNdcgAt5','usableAnchorHitAt5','insufficientDetection','citationIntegrity','medianLatencyMs','p95LatencyMs'];
+const metrics=Object.fromEntries(keys.map(k=>[k+'Delta',candidate.metrics[k]-baseline.metrics[k]]));Object.assign(metrics,{positivePairs:positive.length,wins:positive.filter(p=>p.mrrDelta>0).length,losses:positive.filter(p=>p.mrrDelta<0).length,ties:positive.filter(p=>p.mrrDelta===0).length,negativePairs:negative.length});
+const report={schema:'zhiheng-retrieval-comparison/1',status:'completed',createdAt:new Date().toISOString(),metrics,baseline:{variant:baseline.variant,metrics:baseline.metrics},candidate:{variant:candidate.variant,metrics:candidate.metrics},caseSetSha256:baseline.caseSetSha256,corpusSha256:baseline.corpusSha256,inputReports:files.map((f,i)=>({path:path.resolve(f),sha256:hash(raw[i])})),pairs,
+  decision:{retrievalRankingImproved:metrics.anchorMrrAt5Delta>0,noEvidenceRegression:metrics.insufficientDetectionDelta<0,automaticPromotion:false},limitations:['28 AI-authored anchored textbook cases, not human blind labels or full answer-quality evaluation.','Bilingual questions share 12 topics; do not treat 24 positive questions as independent topics.','A recall gain does not establish reliable abstention or factual answer support.']};
+await fs.mkdir(path.dirname(path.resolve(value('--output'))),{recursive:true});await fs.writeFile(value('--output'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({metrics,decision:report.decision}));

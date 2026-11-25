@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "name": "软件基础 · 中文形式逻辑与程序验证全文库",
+  "profile": "formal",
+  "description": "精选 Software Foundations 中文译本的逻辑基础与程序语言基础原文、定义和证明代码；不包含生成的习题答案。",
+  "version": "sf-zh-2026-06-19-v1",
+  "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+  "language": "zh-CN/en",
+  "languages": {
+    "zh-CN": 484,
+    "en": 136,
+    "mixed": 15,
+    "code": 77
+  },
+  "licenses": [
+    "MIT"
+  ],
+  "sourceCount": 2,
+  "chapterCount": 25,
+  "sectionCount": 712,
+  "contentSha256": "a77bdcc2e86ae79dac7e6672307bbb803b9a7d32a53922647334e3a7efc22285",
+  "totalCharacters": 649652,
+  "repository": "https://github.com/Rocq-zh/SF-zh",
+  "pinnedRepository": "https://github.com/Rocq-zh/SF-zh/tree/3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+  "officialReference": "https://softwarefoundations.cis.upenn.edu/lf-current/Preface.html",
+  "translationStatus": "alpha",
+  "proofStatus": "source-text-not-rechecked",
+  "limitations": [
+    "上游中文版标注为 alpha，可能有翻译错误；部分章节尚为英文，已按每节实际解释文字标记语言，没有生成翻译。",
+    "采用固定仓库快照；原卷标题页标注 LF 5.7 / PLF 5.8，发布日期为 2022-03-14，不将快照日期冒充教材出版日期。",
+    "这是经过章节筛选的开放教材全文库，不是同行评审论文库。",
+    "保留上游已有证明和含 Admitted 的练习占位；本次未运行 Rocq/Coq 对它们重新编译验证。",
+    "中文章节关键词是人工检索元数据，未插入来源正文，不应当作原文引用。"
+  ],
+  "transformations": [
+    "按 Coq 文档标题分节；保留解释文字、证明代码与打印结果；剥离分隔线、TODO 编辑注释和少量 Coqdoc 强调标记；不索引仅有导入或模块声明的空节。",
+    "在原始块边界分片；sourceStartLine/sourceEndLine 指向保留的原始 .v 文件范围。"
+  ],
+  "keywordPolicy": "只添加本节实际出现的术语及人工定义同义词，不把整章所有术语赋给每个片段；关键词不属于原文。",
+  "sources": [
+    {
+      "path": "lf-current/Basics.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "f7162bcd50a5a31a83b3c3ad62275529ea796f4efc6de63340dd84ba6f9f72eb",
+      "bytes": 55438,
+      "title": "函数式编程基础",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 30,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Basics.v"
+    },
+    {
+      "path": "lf-current/Induction.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "624cf7f863f32460def6d4df8e06a42bd76d21fd32afee1b569fd5b64a50ef38",
+      "bytes": 24277,
+      "title": "归纳证明",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 16,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Induction.v"
+    },
+    {
+      "path": "lf-current/Lists.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "785a9ba4965b8a1748572a9171c3b4161f28b06a02ad0755f727498fc60ab29a",
+      "bytes": 36291,
+      "title": "列表与数据结构",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 33,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Lists.v"
+    },
+    {
+      "path": "lf-current/Poly.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "8baf57194109a032d14a2f0abc8b53885ad5d62dddb12eeb8d0ef3af354ac3ba",
+      "bytes": 38142,
+      "title": "多态与高阶函数",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 36,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Poly.v"
+    },
+    {
+      "path": "lf-current/Tactics.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "6b4564b40fb38ac52878792b6f06640f7b6f0333071939cb830b88e159865776",
+      "bytes": 39126,
+      "title": "证明策略",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 27,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Tactics.v"
+    },
+    {
+      "path": "lf-current/Logic.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "f4acab363512d62d182d9adece8761ec31ee20187f718480445d0a06e3f0db3a",
+      "bytes": 52138,
+      "title": "Coq 中的逻辑系统",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 41,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v"
+    },
+    {
+      "path": "lf-current/IndProp.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "3c5d469428a15d279d33bb8956014c29d832c366dd9b3ac7bcec5cbaccb5e779",
+      "bytes": 72955,
+      "title": "归纳定义的命题",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 49,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndProp.v"
+    },
+    {
+      "path": "lf-current/ProofObjects.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "776e011b2c03d59a7280ce365aaabe1595a1f667244284c7ea32626d5c9b5382",
+      "bytes": 20562,
+      "title": "证明对象",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 17,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/ProofObjects.v"
+    },
+    {
+      "path": "lf-current/IndPrinciples.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "d7c02e008253209a00b19914364cae40e0bb0e2861835d3f9e04a42bee976e82",
+      "bytes": 31352,
+      "title": "归纳原理",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 21,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndPrinciples.v"
+    },
+    {
+      "path": "lf-current/Rel.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "ed9f800d8c8e4c47c7686feb23b4346d2576f80fb1e7d4e12cbb62711c8ab44c",
+      "bytes": 12077,
+      "title": "关系的性质",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 22,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Rel.v"
+    },
+    {
+      "path": "lf-current/Maps.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "ef13dfb517131cbe08f3a72302354caa6f348eac513ed54baec2bd21c12db2b0",
+      "bytes": 13346,
+      "title": "全映射与偏映射",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 12,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Maps.v"
+    },
+    {
+      "path": "lf-current/Imp.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "9fe881d817b9d44d7da2bc8ede5e160c54272a6fd2b2d1f064498da8f62abb67",
+      "bytes": 64991,
+      "title": "命令式程序",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 54,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Imp.v"
+    },
+    {
+      "path": "lf-current/ImpCEvalFun.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "45e9a90d98360351fc960a0a708ef572cbaad87eb0839adbd331309a8c12eed7",
+      "bytes": 12366,
+      "title": "求值函数",
+      "sourceTitle": "软件基础 · 逻辑基础",
+      "sectionCount": 9,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/ImpCEvalFun.v"
+    },
+    {
+      "path": "plf-current/Equiv.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "71c6863ba46b290e5bf976b0559291abe1aa97ac49eb454fcbc7101b90fb2c1b",
+      "bytes": 50220,
+      "title": "程序等价",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 40,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Equiv.v"
+    },
+    {
+      "path": "plf-current/Hoare.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "fb6be7da5c5f66b5f98b3d40fced3a705df9a1e6103eac5a13ae6f8088f80ed2",
+      "bytes": 62289,
+      "title": "霍尔逻辑",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 30,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v"
+    },
+    {
+      "path": "plf-current/Hoare2.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "c8f3d9e1dc00128d08f8208d56423950a46181c38286357eb7624169802b45ae",
+      "bytes": 67378,
+      "title": "霍尔逻辑进阶",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 42,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v"
+    },
+    {
+      "path": "plf-current/HoareAsLogic.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "666ce71964e920b4c8db2da29a492d7c80b8bf11c7c99af4b119d34c05f33abe",
+      "bytes": 10548,
+      "title": "作为逻辑的霍尔逻辑",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 7,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/HoareAsLogic.v"
+    },
+    {
+      "path": "plf-current/Smallstep.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "bf63a47ea54185d5650b92c2e082136d474438ab157f17c5ea0cab76e244dc9b",
+      "bytes": 57981,
+      "title": "小步操作语义",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 40,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v"
+    },
+    {
+      "path": "plf-current/Types.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "7c9cef825675bf70ba19788e2abd42a4577d3751f1e978fea56b64d10076479d",
+      "bytes": 21573,
+      "title": "类型系统",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 29,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Types.v"
+    },
+    {
+      "path": "plf-current/Stlc.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "76d90421e8755fb63f243c0ec22ed9148452e5eb5551051599d8abc34d2245a7",
+      "bytes": 24202,
+      "title": "简单类型 Lambda 演算",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 19,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Stlc.v"
+    },
+    {
+      "path": "plf-current/StlcProp.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "f8ebf11da663197965c613852ae80ed9d3231c0f46fe70aff306e740c1729c05",
+      "bytes": 33725,
+      "title": "简单类型 Lambda 演算的性质",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 24,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/StlcProp.v"
+    },
+    {
+      "path": "plf-current/MoreStlc.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "099d113effa6d1c631965c435629d409101ab6a4a919e6c6b3653ba6f04921d0",
+      "bytes": 70767,
+      "title": "简单类型 Lambda 演算扩展",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 32,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/MoreStlc.v"
+    },
+    {
+      "path": "plf-current/Typechecking.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "a4736aedbfc89c831bf1770f4977cb3ef5805c1edd62f99442f2be04f1d4f855",
+      "bytes": 15422,
+      "title": "类型检查",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 8,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Typechecking.v"
+    },
+    {
+      "path": "plf-current/Sub.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "f597129acbb6bd387cf8494509c59cc67c37a560b23266d382e3a0b987f8ee99",
+      "bytes": 58632,
+      "title": "子类型",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 52,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Sub.v"
+    },
+    {
+      "path": "plf-current/Norm.v",
+      "revision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+      "sha256": "58773c0dea4346cbb0c8a719e559d6bd382c2eeecb9b4bb8760b33b91c72faef",
+      "bytes": 40000,
+      "title": "正规化",
+      "sourceTitle": "软件基础 · 编程语言基础",
+      "sectionCount": 22,
+      "url": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Norm.v"
+    }
+  ],
+  "notices": [
+    {
+      "path": "lf-current/LICENSE",
+      "sha256": "f5fa4bec075bc428bc10c55db238eaa1f83225185130c10951e815aa4e82e1f4"
+    },
+    {
+      "path": "plf-current/LICENSE",
+      "sha256": "f5fa4bec075bc428bc10c55db238eaa1f83225185130c10951e815aa4e82e1f4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "914d811bbcd44bfdff214b7fc9c47e33e497636059e2df5fa012dfbeb043bcda"
+    },
+    {
+      "path": "lf-current/index.html",
+      "sha256": "1ff4fdc57255a45bf73cd5c5662341a45f9bdf904801d20169054a3d67045b3c"
+    },
+    {
+      "path": "plf-current/index.html",
+      "sha256": "68c714e3672a4d21306158c5c4343a69df461afc9b7852d55476ff9c0b822d1a"
+    }
+  ]
+}

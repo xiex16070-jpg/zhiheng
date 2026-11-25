@@ -1,0 +1,60 @@
+{
+  "version": "formal-fresh-holdout-20261105-v1",
+  "frozenAt": "2026-11-05",
+  "description": "读固定教材原文后，先确定六个新问题及期望章节和概念组合，再运行一次排名。独立于原十二题回归集和模型实验室的正式冻结模型评测。不得根据本轮排名修改问句、期望或评分。",
+  "designProvenance": {
+    "corpusSha256": "a77bdcc2e86ae79dac7e6672307bbb803b9a7d32a53922647334e3a7efc22285",
+    "sourceRevision": "3f680b5130fe5495de9a3b7a63ae2591f15f055a",
+    "sourceReviewOnlyBeforeRanking": true,
+    "newQuestionsComparedWith": "evals/formal-cases.json",
+    "sourceRecordsReviewed": ["54102332932884", "239425545182083", "33151563798124", "184106585276012", "153824886053504"],
+    "limitations": [
+      "概念匹配只是检索相关性代理，不评估生成答案或自然语言蕴涵。",
+      "问句来自本轮原文审读，不是独立外部标注者提供的题集。",
+      "本集在首次测量后转为可复现回归资料，后续调优不得再把它称为未见留出集。"
+    ]
+  },
+  "cases": [
+    {
+      "id": "implicit-nil-type-information",
+      "question": "Coq 无法推断空列表 nil 的类型时，为什么需要显式类型标注，或用 @ 提供隐式参数？",
+      "sourcePaths": ["lf-current/Poly.v"],
+      "concepts": [["类型参数", "隐式参数"], ["nil"], ["@"], ["局部信息", "不知道应该"]],
+      "meaning": "同一实际正文应解释信息不足，并展示类型标注或强制显式参数的处理。"
+    },
+    {
+      "id": "generalize-second-variable",
+      "question": "证明 double 是单射时，为什么在归纳前过早把 m 引入上下文，会使归纳假设无法用于它的前趋？",
+      "sourcePaths": ["lf-current/Tactics.v"],
+      "concepts": [["double_injective"], ["归纳假设"], ["上下文"], ["前趋", "任何想要的"]],
+      "meaning": "应召回控制第二个变量的一般性及成功和失败证明的实际说明。"
+    },
+    {
+      "id": "reflect-case-evidence",
+      "question": "reflect P b 怎样在布尔分类讨论时，直接给出命题 P 或非 P 的证明证据？",
+      "sourcePaths": ["lf-current/IndProp.v"],
+      "concepts": [["Inductive reflect"], ["ReflectT"], ["ReflectF"], ["分类讨论"], ["证据"]],
+      "meaning": "须有反射命题的两个构造子与分类讨论用途的正文，单独提到布尔值不计命中。"
+    },
+    {
+      "id": "total-map-function-lookup",
+      "question": "用函数表示全映射时，为什么不用另写 find 查找操作，查不到的键又返回什么？",
+      "sourcePaths": ["lf-current/Maps.v"],
+      "concepts": [["total_map"], ["默认值", "默认元素"], ["find"], ["函数应用"]],
+      "meaning": "须同时说明函数表示、默认元素及查询就是函数应用。"
+    },
+    {
+      "id": "command-equivalence-divergence",
+      "question": "判断两段 Imp 指令行为等价时，为什么只比较停机结果还不够，也要考虑两者都不终止的初始状态？",
+      "sourcePaths": ["plf-current/Equiv.v"],
+      "concepts": [["cequiv"], ["初始状态"], ["发散"], ["反之亦然"]],
+      "meaning": "正文必须解释指令等价的双向停机关系和发散情形，而非仅说表达式求值相等。"
+    },
+    {
+      "id": "outside-corpus-raft-election",
+      "question": "Raft 协议如何利用任期与多数派投票，保证同一任期内领导者唯一？",
+      "expectInsufficient": true,
+      "meaning": "该固定教材快照未提供 Raft 协议的原文。只有空召回或弱证据才通过。"
+    }
+  ]
+}

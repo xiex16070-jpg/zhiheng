@@ -1,0 +1,13 @@
+{
+  "name": "logic-kb-agent-evals",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.22.0" },
+  "dependencies": { "promptfoo": "0.125.1" },
+  "scripts": { "test:dependencies": "node --test dependency-compat.mjs" },
+  "overrides": {
+    "basic-ftp": "6.2.6",
+    "glob": "14.0.2",
+    "minimatch": "11.0.1"
+  }
+}

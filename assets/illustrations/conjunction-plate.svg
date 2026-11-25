@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328" height="176" viewBox="0 0 328 176" fill="none">
+  <title>合取消去 · Conjunction elimination</title>
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" stroke="#b1cbb9" opacity=".12"/>
+    </pattern>
+  </defs>
+  <path fill="url(#grid)" d="M0 0h328v176H0z"/>
+  <g stroke="#afc7b8" opacity=".5">
+    <path d="M5 12V5h7m304 0h7v7M5 164v7h7m304 0h7v-7"/>
+    <path stroke-dasharray="2 5" d="M21 142h286M164 12v143"/>
+  </g>
+  <!-- Axonometric open pages. The shared fold sits under the premise. -->
+  <path d="M24 108 114 81q25 0 50 12 25-12 50-12l90 27v9l-93 28q-24 0-47 11-23-11-47-11l-93-28z" fill="#3e6b60" stroke="#c6d7c2" stroke-linejoin="round"/>
+  <path d="m24 108 92 28q24 0 48 12 24-12 48-12l92-28m-280 4 92 28q24 0 48 12 24-12 48-12l92-28" stroke="#b5c8b6"/>
+  <path d="m27 105 87-26q27-1 50 13v53q-24-12-47-12z" fill="#c8d4bc" stroke="#eeeade"/>
+  <path d="m301 105-87-26q-27-1-50 13v53q24-12 47-12z" fill="#edebda" stroke="#f5f0db"/>
+  <g stroke="#688779" stroke-linecap="round">
+    <path d="m56 103 55-16q18-1 34 6m-78 14 47-14q17-1 32 5m-69 13 38-11q18-1 31 5m37 13q16-7 32-6l34 10m-64 2q14-6 29-5l26 8"/>
+    <path d="m187 94 19-5 62 18-18 6z"/>
+  </g>
+  <path d="m173 139 7-3v14l-4-1-3 4z" fill="#dbb06d"/>
+  <!-- Two projections of the same assumption, shown as a bifurcating proof. -->
+  <g stroke="#e6bc79" stroke-width="1.3" stroke-linejoin="round">
+    <path d="M164 35v9m0 0L98 54v4m66-14 66 10v4"/>
+    <circle cx="164" cy="47" r="2.7" fill="#e6bc79"/>
+  </g>
+  <g fill="#f6edcf" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-style="italic">
+    <text x="164" y="30">P ∧ Q</text>
+    <text x="98" y="75">P</text><text x="230" y="75">Q</text>
+  </g>
+  <g fill="#bccec1" font-family="Consolas, monospace" font-size="8" letter-spacing="1.3">
+    <text x="19" y="25">FIG. 01</text><text x="19" y="163">PLATE / LOGIC</text>
+  </g>
+</svg>

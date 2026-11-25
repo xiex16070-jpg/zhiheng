@@ -1,0 +1,58 @@
+Zhiheng (知衡 · Agent 工作台)
+Copyright 2026 Zhiheng Contributors
+
+This product includes software developed by Zhiheng Contributors
+(https://github.com/xiex16070-jpg/zhiheng).
+
+First-party source code, documentation, original SVG icons, and release kit
+materials in this repository are licensed under the Apache License, Version 2.0
+(see LICENSE), unless a subdirectory or file explicitly carries its own upstream
+license or attribution notice.
+
+Brand & Visual Assets
+---------------------
+The "知衡 / Zhiheng" name, brand mark (assets/brand/mark.svg), and derived
+Windows icon (scripts/windows/zhiheng.ico) identify this project. See Section 6
+of the Apache License 2.0 regarding trademarks. Visual asset provenance,
+including generated illustrations, is documented in assets/README.md and
+docs/release-kit/credits.md.
+
+Third-Party Components and Corpora
+----------------------------------
+Third-party materials bundled or referenced by this repository remain under
+their respective upstream licenses:
+
+1. Software Foundations (Logical Foundations & Programming Language Foundations,
+   Rocq-zh Chinese translation snapshot)
+   - License: MIT License
+   - Source and full upstream notices: data/formal/README.md,
+     data/formal/sources/lf-current/LICENSE, and
+     data/formal/sources/plf-current/LICENSE.
+
+2. Motion (motion, framer-motion, motion-dom, motion-utils)
+   - License: MIT License
+   - Full notices: assets/vendor/NOTICE.txt.
+
+3. GSAP (GreenSock Animation Platform)
+   - License: GreenSock Standard 'no charge' License
+     (https://gsap.com/standard-license)
+   - Copyright (c) 2008-2026, GreenSock. All rights reserved.
+   - Full notices: assets/vendor/NOTICE.txt.
+
+4. citeproc-js (via @citation-js/plugin-csl)
+   - Copyright (c) 2009-2019 Frank Bennett
+   - Dual-licensed under CPAL-1.0 or AGPL-3.0-or-later (see upstream package
+     LICENSE and scripts/windows/notices/).
+
+5. Citation Style Language (CSL) styles and locales (via @citation-js/plugin-csl)
+   - License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+   - Upstream: https://github.com/citation-style-language/styles and
+     https://github.com/citation-style-language/locales.
+
+6. Microsoft VS Code Codicons (bundled inside Playwright's viewer assets)
+   - License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+   - Upstream: https://github.com/microsoft/vscode-codicons.
+
+7. Node.js Runtime (bundled only in Windows portable ZIP releases)
+   - License: MIT and bundled third-party licenses (see runtime/LICENSE inside
+     the Windows desktop release archive).

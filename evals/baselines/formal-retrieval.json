@@ -1,0 +1,1088 @@
+{
+  "schemaVersion": 1,
+  "caseSet": "formal-retrieval-v1",
+  "createdAt": "2026-11-03T13:52:42.293Z",
+  "caseSetSha256": "96965bf2d81aed075379d05216c7731b3c6aeb3ae328ae2e23209e648171b5f3",
+  "matcherClarifications": [
+    "第一次校验发现两个概念判据没有任何金标准候选：该译本将witness译作例证，并使用ex_intro构造见证；基础情形直接写成P(O)。因此仅补入这些正文等义表达，未更改问题、目标章节或期望语义。"
+  ],
+  "corpus": {
+    "engine": "file-bm25",
+    "papers": 712,
+    "disciplines": 1,
+    "profile": "formal",
+    "corpusId": "a77bdcc2e86ae79dac7e6672307bbb803b9a7d32a53922647334e3a7efc22285",
+    "name": "软件基础 · 中文形式逻辑与程序验证全文库",
+    "description": "精选 Software Foundations 中文译本的逻辑基础与程序语言基础原文、定义和证明代码；不包含生成的习题答案。",
+    "sourceCount": 2,
+    "chapterCount": 25,
+    "licenses": [
+      "MIT"
+    ],
+    "unit": "全文片段",
+    "sha256": "a77bdcc2e86ae79dac7e6672307bbb803b9a7d32a53922647334e3a7efc22285"
+  },
+  "configuration": {
+    "channels": [
+      "paper"
+    ],
+    "topK": 5,
+    "rewrite": false,
+    "rerank": false,
+    "modelCalls": 0
+  },
+  "methodology": "正例按预先指定sourcePath及原始正文概念组合判定；不使用标题、关键词或纯练习作为支持。负例检查空召回或weak。偏移对照getPaper原文，来源字段对照固定语料记录。MRR仅统计10个正例且排名截断为5。",
+  "semanticSupportMeasured": false,
+  "limitations": [
+    "这是12题的检索与来源完整性回归，不是模型回答质量、自然语言蕴涵或医学结论评测。",
+    "概念组合匹配是可复现代理指标；真实回答仍需逐句核对原文，不保证所有命中都能支持任何表述。",
+    "未比较其他向量模型、远端重排器或旧CSL库，不宣称全领域优于旧库。"
+  ],
+  "metrics": {
+    "positiveCases": 10,
+    "insufficientCases": 2,
+    "hitAt5": 1,
+    "mrrAt5": 0.8833333333333332,
+    "usableHitAt5": 1,
+    "insufficientDetection": 1,
+    "citationOffsetAccuracy": 1,
+    "sourceMetadataCompleteness": 1,
+    "retrievedResults": 54
+  },
+  "passed": true,
+  "cases": [
+    {
+      "id": "conjunction-elimination",
+      "question": "合取命题成立时，如何分别取出左边和右边的证据？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.895,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "217525827469875",
+          "title": "证明对象 · 合取",
+          "sourcePath": "lf-current/ProofObjects.v",
+          "section": "合取",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/ProofObjects.v#L278-L325"
+        },
+        {
+          "rank": 2,
+          "ref": "58865390884868",
+          "title": "Coq 中的逻辑系统 · 合取",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "合取",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L92-L124"
+        },
+        {
+          "rank": 3,
+          "ref": "71704021869856",
+          "title": "霍尔逻辑进阶 · Example: Simple Conditionals",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "Example: Simple Conditionals",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L188-L218"
+        },
+        {
+          "rank": 4,
+          "ref": "26797981243654",
+          "title": "归纳定义的命题 · 归纳定义的命题",
+          "sourcePath": "lf-current/IndProp.v",
+          "section": "归纳定义的命题",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndProp.v#L10-L63"
+        },
+        {
+          "rank": 5,
+          "ref": "217245217110648",
+          "title": "霍尔逻辑 · 条件",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "条件",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L949-L1034"
+        }
+      ]
+    },
+    {
+      "id": "iff-two-directions",
+      "question": "逻辑等价为什么需要两个方向的蕴含证明？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.972,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "78512554949129",
+          "title": "Coq 中的逻辑系统 · 逻辑等价",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "逻辑等价",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L476-L507"
+        },
+        {
+          "rank": 2,
+          "ref": "223828899063000",
+          "title": "程序等价 · 行为等价是一种一致性",
+          "sourcePath": "plf-current/Equiv.v",
+          "section": "行为等价是一种一致性",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Equiv.v#L501-L601"
+        },
+        {
+          "rank": 3,
+          "ref": "33151563798124",
+          "title": "归纳定义的命题 · 案例学习：改进互映",
+          "sourcePath": "lf-current/IndProp.v",
+          "section": "案例学习：改进互映",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndProp.v#L1347-L1399"
+        },
+        {
+          "rank": 4,
+          "ref": "173449048796083",
+          "title": "Coq 中的逻辑系统 · 广集与逻辑等价",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "广集与逻辑等价",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L534-L593"
+        },
+        {
+          "rank": 5,
+          "ref": "88462253004386",
+          "title": "归纳定义的命题 · 练习：3 星, standard, optional (star_ne)",
+          "sourcePath": "lf-current/IndProp.v",
+          "section": "练习：3 星, standard, optional (star_ne)",
+          "relevant": false,
+          "contentRole": "exercise",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndProp.v#L1810-L1834"
+        }
+      ]
+    },
+    {
+      "id": "constructive-excluded-middle",
+      "question": "排中律在 Coq 的构造逻辑中可以直接证明吗？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 1,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "188792496271279",
+          "title": "Coq 中的逻辑系统 · 经典逻辑 vs. 构造逻辑",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "经典逻辑 vs. 构造逻辑",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L1276-L1350"
+        },
+        {
+          "rank": 2,
+          "ref": "215375399687778",
+          "title": "Coq 中的逻辑系统 · 练习：3 星, advanced (not_exists_dist)",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "练习：3 星, advanced (not_exists_dist)",
+          "relevant": false,
+          "contentRole": "exercise",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L1367-L1383"
+        },
+        {
+          "rank": 3,
+          "ref": "172785689100377",
+          "title": "作为逻辑的霍尔逻辑 · HoareAsLogic: 证明论霍尔逻辑",
+          "sourcePath": "plf-current/HoareAsLogic.v",
+          "section": "HoareAsLogic: 证明论霍尔逻辑",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/HoareAsLogic.v#L3-L17"
+        },
+        {
+          "rank": 4,
+          "ref": "25154342016894",
+          "title": "Coq 中的逻辑系统 · 练习：3 星, standard (excluded_middle_irrefutable)",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "练习：3 星, standard (excluded_middle_irrefutable)",
+          "relevant": false,
+          "contentRole": "exercise",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L1352-L1365"
+        },
+        {
+          "rank": 5,
+          "ref": "243958782431195",
+          "title": "证明策略 · The [injection] and [discriminate] Tactics",
+          "sourcePath": "lf-current/Tactics.v",
+          "section": "The [injection] and [discriminate] Tactics",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Tactics.v#L163-L240"
+        }
+      ]
+    },
+    {
+      "id": "existential-witness",
+      "question": "存在量词命题应该如何提供见证并完成证明？",
+      "expectInsufficient": false,
+      "goldCount": 2,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.778,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "68356046606356",
+          "title": "证明对象 · 存在量化",
+          "sourcePath": "lf-current/ProofObjects.v",
+          "section": "存在量化",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/ProofObjects.v#L364-L386"
+        },
+        {
+          "rank": 2,
+          "ref": "237253936229027",
+          "title": "Coq 中的逻辑系统 · 存在量化",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "存在量化",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L597-L625"
+        },
+        {
+          "rank": 3,
+          "ref": "26797981243654",
+          "title": "归纳定义的命题 · 归纳定义的命题",
+          "sourcePath": "lf-current/IndProp.v",
+          "section": "归纳定义的命题",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndProp.v#L10-L63"
+        },
+        {
+          "rank": 4,
+          "ref": "48964278485559",
+          "title": "函数式编程基础 · 基于改写的证明",
+          "sourcePath": "lf-current/Basics.v",
+          "section": "基于改写的证明",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Basics.v#L818-L851"
+        },
+        {
+          "rank": 5,
+          "ref": "188792496271279",
+          "title": "Coq 中的逻辑系统 · 经典逻辑 vs. 构造逻辑",
+          "sourcePath": "lf-current/Logic.v",
+          "section": "经典逻辑 vs. 构造逻辑",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Logic.v#L1276-L1350"
+        }
+      ]
+    },
+    {
+      "id": "natural-induction",
+      "question": "自然数归纳证明为什么要分别处理基础情形和归纳步骤？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 0.3333333333333333,
+      "weak": false,
+      "coverage": 0.955,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "113635915896732",
+          "title": "归纳原理 · 基础",
+          "sourcePath": "lf-current/IndPrinciples.v",
+          "section": "基础",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndPrinciples.v#L11-L53"
+        },
+        {
+          "rank": 2,
+          "ref": "224331645418423",
+          "title": "列表与数据结构 · 对列表进行归纳",
+          "sourcePath": "lf-current/Lists.v",
+          "section": "对列表进行归纳",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Lists.v#L492-L554"
+        },
+        {
+          "rank": 3,
+          "ref": "6325809951625",
+          "title": "归纳证明 · 归纳法证明",
+          "sourcePath": "lf-current/Induction.v",
+          "section": "归纳法证明",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Induction.v#L90-L165"
+        },
+        {
+          "rank": 4,
+          "ref": "212621230000766",
+          "title": "归纳原理 · 深入 [induction] 策略",
+          "sourcePath": "lf-current/IndPrinciples.v",
+          "section": "深入 [induction] 策略",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndPrinciples.v#L312-L366"
+        },
+        {
+          "rank": 5,
+          "ref": "193927972321718",
+          "title": "函数式编程基础 · 数值",
+          "sourcePath": "lf-current/Basics.v",
+          "section": "数值",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Basics.v#L445-L636"
+        }
+      ]
+    },
+    {
+      "id": "curry-howard",
+      "question": "柯里霍华德对应如何把命题、类型、证明与程序联系起来？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.957,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "62849070917120",
+          "title": "证明对象 · ProofObjects: 柯里-霍华德对应",
+          "sourcePath": "lf-current/ProofObjects.v",
+          "section": "ProofObjects: 柯里-霍华德对应",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/ProofObjects.v#L1-L94"
+        },
+        {
+          "rank": 2,
+          "ref": "133506515145896",
+          "title": "归纳原理 · IndPrinciples: 归纳法则",
+          "sourcePath": "lf-current/IndPrinciples.v",
+          "section": "IndPrinciples: 归纳法则",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndPrinciples.v#L3-L7"
+        },
+        {
+          "rank": 3,
+          "ref": "149993757991314",
+          "title": "归纳原理 · The Coq Trusted Computing Base",
+          "sourcePath": "lf-current/IndPrinciples.v",
+          "section": "The Coq Trusted Computing Base",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/IndPrinciples.v#L743-L801"
+        },
+        {
+          "rank": 4,
+          "ref": "80563031062282",
+          "title": "多态与高阶函数 · 练习：2 星, advanced (currying)",
+          "sourcePath": "lf-current/Poly.v",
+          "section": "练习：2 星, advanced (currying)",
+          "relevant": false,
+          "contentRole": "exercise",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Poly.v#L860-L908"
+        }
+      ]
+    },
+    {
+      "id": "hoare-assignment",
+      "question": "霍尔逻辑的赋值规则为什么要在后置条件里做变量替换？",
+      "expectInsufficient": false,
+      "goldCount": 5,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.938,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "183906699583560",
+          "title": "霍尔逻辑 · 赋值",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "赋值",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L343-L486"
+        },
+        {
+          "rank": 2,
+          "ref": "54951323403174",
+          "title": "霍尔逻辑进阶 · 示例：使用加法和减法实现交换操作",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "示例：使用加法和减法实现交换操作",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L145-L183"
+        },
+        {
+          "rank": 3,
+          "ref": "71704021869856",
+          "title": "霍尔逻辑进阶 · Example: Simple Conditionals",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "Example: Simple Conditionals",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L188-L218"
+        },
+        {
+          "rank": 4,
+          "ref": "75130089574189",
+          "title": "霍尔逻辑 · 缩放",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "缩放",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L579-L700"
+        },
+        {
+          "rank": 5,
+          "ref": "173188305091059",
+          "title": "霍尔逻辑 · 顺序",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "顺序",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L832-L884"
+        }
+      ]
+    },
+    {
+      "id": "loop-invariant",
+      "question": "一个循环不变式需要满足哪些条件，才能支持循环的正确性证明？",
+      "expectInsufficient": false,
+      "goldCount": 4,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.96,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "156042034020395",
+          "title": "霍尔逻辑 · 循环",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "循环",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L1200-L1324"
+        },
+        {
+          "rank": 2,
+          "ref": "185656414279371",
+          "title": "霍尔逻辑进阶 · Decorated Programs",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "Decorated Programs",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L17-L140"
+        },
+        {
+          "rank": 3,
+          "ref": "187965144734440",
+          "title": "霍尔逻辑进阶 · Finding Loop Invariants",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "Finding Loop Invariants",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L366-L378"
+        },
+        {
+          "rank": 4,
+          "ref": "10831263716183",
+          "title": "霍尔逻辑 · Hoare: 霍尔逻辑（第一部分）",
+          "sourcePath": "plf-current/Hoare.v",
+          "section": "Hoare: 霍尔逻辑（第一部分）",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare.v#L1-L76"
+        },
+        {
+          "rank": 5,
+          "ref": "278806589087317",
+          "title": "霍尔逻辑进阶 · Example: Finding Square Roots",
+          "sourcePath": "plf-current/Hoare2.v",
+          "section": "Example: Finding Square Roots",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Hoare2.v#L658-L719"
+        }
+      ]
+    },
+    {
+      "id": "smallstep-stuck-divergence",
+      "question": "小步语义为什么能区分程序不终止和程序卡住？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 1,
+      "weak": false,
+      "coverage": 0.916,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "11833269663900",
+          "title": "小步操作语义 · Smallstep: 小步操作语义",
+          "sourcePath": "plf-current/Smallstep.v",
+          "section": "Smallstep: 小步操作语义",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L1-L46"
+        },
+        {
+          "rank": 2,
+          "ref": "1954685090086",
+          "title": "小步操作语义 · 大步语义和小步语义的等价关系",
+          "sourcePath": "plf-current/Smallstep.v",
+          "section": "大步语义和小步语义的等价关系",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L1018-L1020"
+        },
+        {
+          "rank": 3,
+          "ref": "98612150915293",
+          "title": "小步操作语义 · 小步堆栈机",
+          "sourcePath": "plf-current/Smallstep.v",
+          "section": "小步堆栈机",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Smallstep.v#L1511-L1536"
+        },
+        {
+          "rank": 4,
+          "ref": "109619199495561",
+          "title": "简单类型 Lambda 演算 · 操作语义",
+          "sourcePath": "plf-current/Stlc.v",
+          "section": "操作语义",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Stlc.v#L186-L188"
+        },
+        {
+          "rank": 5,
+          "ref": "153611331047732",
+          "title": "简单类型 Lambda 演算 · 归约",
+          "sourcePath": "plf-current/Stlc.v",
+          "section": "归约",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Stlc.v#L361-L426"
+        }
+      ]
+    },
+    {
+      "id": "type-safety",
+      "question": "类型安全为什么需要同时证明进展性和类型保持性？",
+      "expectInsufficient": false,
+      "goldCount": 1,
+      "hitAt5": true,
+      "reciprocalRank": 0.5,
+      "weak": false,
+      "coverage": 0.842,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "233405331989071",
+          "title": "类型系统 · Types: 类型系统",
+          "sourcePath": "plf-current/Types.v",
+          "section": "Types: 类型系统",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Types.v#L3-L16"
+        },
+        {
+          "rank": 2,
+          "ref": "15371791084773",
+          "title": "类型系统 · 类型可靠性",
+          "sourcePath": "plf-current/Types.v",
+          "section": "类型可靠性",
+          "relevant": true,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Types.v#L464-L478"
+        },
+        {
+          "rank": 3,
+          "ref": "128072302129375",
+          "title": "简单类型 Lambda 演算 · Stlc: 简单类型 Lambda-演算",
+          "sourcePath": "plf-current/Stlc.v",
+          "section": "Stlc: 简单类型 Lambda-演算",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Stlc.v#L3-L15"
+        },
+        {
+          "rank": 4,
+          "ref": "21496870560215",
+          "title": "子类型 · Properties",
+          "sourcePath": "plf-current/Sub.v",
+          "section": "Properties",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Sub.v#L980-L985"
+        },
+        {
+          "rank": 5,
+          "ref": "254532578119206",
+          "title": "正规化 · Language",
+          "sourcePath": "plf-current/Norm.v",
+          "section": "Language",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Norm.v#L78-L82"
+        }
+      ]
+    },
+    {
+      "id": "missing-converse-explanation",
+      "question": "请查找明确解释“逆命题不成立”的原文。",
+      "expectInsufficient": true,
+      "goldCount": null,
+      "hitAt5": null,
+      "reciprocalRank": 0,
+      "weak": true,
+      "coverage": 0,
+      "missingConcepts": [
+        "逆命题"
+      ],
+      "passed": true,
+      "results": []
+    },
+    {
+      "id": "outside-domain-medicine",
+      "question": "阿司匹林能降低心肌梗死复发风险吗，推荐每日剂量是多少？",
+      "expectInsufficient": true,
+      "goldCount": null,
+      "hitAt5": null,
+      "reciprocalRank": 0,
+      "weak": true,
+      "coverage": 0.24,
+      "missingConcepts": [],
+      "passed": true,
+      "results": [
+        {
+          "rank": 1,
+          "ref": "252451413755833",
+          "title": "命令式程序 · 带变量的表达式",
+          "sourcePath": "lf-current/Imp.v",
+          "section": "带变量的表达式",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Imp.v#L815-L816"
+        },
+        {
+          "rank": 2,
+          "ref": "128917516178308",
+          "title": "多态与高阶函数 · 多态候选",
+          "sourcePath": "lf-current/Poly.v",
+          "section": "多态候选",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Poly.v#L454-L484"
+        },
+        {
+          "rank": 3,
+          "ref": "275726483712570",
+          "title": "简单类型 Lambda 演算 · 值",
+          "sourcePath": "plf-current/Stlc.v",
+          "section": "值",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/plf-current/Stlc.v#L193-L238"
+        },
+        {
+          "rank": 4,
+          "ref": "126001491842204",
+          "title": "多态与高阶函数 · 类型参数的推断",
+          "sourcePath": "lf-current/Poly.v",
+          "section": "类型参数的推断",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Poly.v#L174-L215"
+        },
+        {
+          "rank": 5,
+          "ref": "96186449391744",
+          "title": "多态与高阶函数 · 多态列表",
+          "sourcePath": "lf-current/Poly.v",
+          "section": "多态列表",
+          "relevant": false,
+          "contentRole": "exposition",
+          "integrity": {
+            "valid": true,
+            "offsetValid": true,
+            "metadataValid": true,
+            "errors": []
+          },
+          "sourceUrl": "https://github.com/Rocq-zh/SF-zh/blob/3f680b5130fe5495de9a3b7a63ae2591f15f055a/lf-current/Poly.v#L18-L109"
+        }
+      ]
+    }
+  ]
+}

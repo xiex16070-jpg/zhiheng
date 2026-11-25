@@ -1,0 +1,22 @@
+.question-heading{margin:0 0 18px;font-size:1.1rem;line-height:1.6;font-weight:600}
+.question-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:9px;margin-bottom:14px}
+.question-option{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;line-height:1.5;padding:12px 16px;border:1px solid var(--line,#cdd6cf);border-radius:12px;background:var(--surface,#fafaf7);color:inherit;cursor:pointer;transition:background .16s,border-color .16s}
+.question-option:hover,.question-option[aria-pressed=true]{background:var(--accent-soft,#e5eee8);border-color:var(--accent,#315d53)}
+.question-option span{font-size:12px;letter-spacing:.08em;color:var(--accent,#315d53);white-space:nowrap}
+.question-answer{box-sizing:border-box;width:100%;resize:vertical;min-height:86px;padding:14px;border:1px solid var(--line,#cdd6cf);border-radius:12px;background:var(--paper,#f8f7f2);color:inherit;font:inherit}
+.visualization-card{overflow:hidden;border:1px solid var(--line,#cdd6cf);border-radius:18px;margin:20px 0;background:var(--surface,#fafaf7)}
+.visualization-card header{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line,#cdd6cf)}
+.visualization-card header>span{display:flex;align-items:center;gap:10px;margin-right:auto;flex-wrap:wrap}
+.visualization-card small{opacity:.6;font-size:12px;letter-spacing:.08em}
+.visualization-card iframe{display:block;width:100%;border:0;background:transparent}
+.visualization-card.expanded iframe{height:75vh!important}
+.viz-status{padding:32px;opacity:.65}
+.followup-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 8px}
+.followup-chips button{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:9px 14px;font:inherit;font-size:.85rem;text-align:left;cursor:pointer;transition:border-color .16s,background .16s}
+.followup-chips button:hover{border-color:var(--accent);background:var(--accent-soft)}
+@media(max-width:768px){.visualization-card header{padding:12px;flex-wrap:wrap}.question-options{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.question-option,.followup-chips button{transition:none}}
+
+.activity-workbench{width:min(760px,96vw)}.activity-intro{padding:28px 32px 18px;background:var(--accent-soft);border-bottom:1px solid var(--line)}.activity-eyebrow{font:12px var(--mono);letter-spacing:.2em;color:var(--accent)}.activity-intro h3{font:600 24px/1.4 var(--serif);margin:12px 0}.activity-intro p{color:var(--muted);margin:0;font-size:13px}.activity-list{padding:20px 28px;display:grid;gap:12px;max-height:60vh;overflow:auto}.activity-card{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--surface-2)}.activity-card>div{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted)}.activity-card h4{margin:12px 0 8px;font-size:15px;line-height:1.6}.activity-card p{font-size:12px;line-height:1.7;color:var(--muted)}.activity-card footer{display:flex;gap:8px}.activity-state{color:var(--accent)}.state-failed,.state-interrupted{color:var(--danger)}.state-awaiting_approval{color:var(--amber)}.activity-empty{padding:36px;text-align:center;color:var(--muted)}[data-unread=true]::after{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%}.subagent-card{margin:10px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}.subagent-card summary{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer}.subagent-card summary span{flex:1;font-size:13px}.subagent-card small{font-size:12px;color:var(--muted)}.subagent-card p{padding:0 16px 16px;margin:0;color:var(--muted);font-size:12px;line-height:1.7}.tool-output{padding:16px;background:var(--surface-3);max-height:220px;overflow:auto;white-space:pre-wrap;font:12px/1.6 var(--mono);border-radius:12px}.rewind-message{opacity:.5;margin-top:12px}.rewind-message:hover,.rewind-message:focus-visible{opacity:1}.composer-hint{flex-wrap:wrap}@media(max-width:768px){.activity-intro{padding:20px}.activity-list{padding:14px}.activity-intro h3{font-size:21px}}
+
+.library-actions button span{white-space:nowrap}

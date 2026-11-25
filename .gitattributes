@@ -1,0 +1,3 @@
+data/formal/** text eol=lf
+examples/hanlogic/** text eol=lf
+assets/vendor/** text eol=lf

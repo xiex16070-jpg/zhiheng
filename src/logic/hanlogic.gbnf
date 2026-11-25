@@ -1,0 +1,22 @@
+# Canonical HanLogic source syntax for llama.cpp grammar-file / grammar field.
+# Semantic checks (variable binding, arity, safe integers and stratification)
+# still run in parseProgram before any user approval or execution.
+root ::= ws statement+ ws
+statement ::= fact | rule | query
+fact ::= "事实 " ground-atom refs? "。" ws
+query ::= "查询 " ground-atom "。" ws
+rule ::= "规则 " identifier "：" ("若 " condition " 则 " atom | "只有 " atom " 才 " atom) exception? refs? "。" ws
+condition ::= conjunction (" 或 " conjunction)*
+conjunction ::= factor (" 且 " factor)*
+factor ::= atom | "(" condition ")"
+exception ::= " 除非 " atom (" 或 " atom)*
+atom ::= ("非 ")? identifier "(" (term (", " term)*)? ")"
+ground-atom ::= ("非 ")? identifier "(" (constant (", " constant)*)? ")"
+term ::= constant | "?" identifier
+constant ::= string | integer
+refs ::= " 依据 " string (", " string)*
+identifier ::= [A-Za-z_\u3400-\u9fff] [A-Za-z_0-9\u3400-\u9fff]{0,127}
+integer ::= "-"? ("0" | [1-9] [0-9]{0,15})
+string ::= "\"" char{0,512} "\""
+char ::= [^"\\\x00-\x1f] | "\\" (["\\nrt] | "u" [0-9a-fA-F]{4})
+ws ::= [ \t\r\n]*

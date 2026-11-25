@@ -1,0 +1,14 @@
+.file-permissions-dialog .modal{width:min(640px,94vw)}
+.file-permissions-host,.file-permissions-panel{padding:20px}.file-permissions-host .file-permissions-panel{padding:0}
+.file-permissions-panel h3{margin:0 0 8px}.file-permissions-panel p{font-size:13px;line-height:1.7;color:var(--muted,#777)}
+.file-permission-options{display:grid;gap:10px;margin-top:16px}
+.file-permission-option{display:block;width:100%;padding:16px;text-align:left;border:1px solid var(--line,#ddd);border-radius:14px;background:var(--surface,#fff);color:var(--ink,#242b2a);cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.file-permission-option>span{display:flex;gap:10px;align-items:center}.file-permission-option small{display:block;margin:8px 0 0 28px;line-height:1.65;opacity:.72}
+.file-permission-option[aria-pressed=true]{border-color:var(--accent,#285e57);background:color-mix(in srgb,var(--accent,#285e57) 9%,var(--surface,#fff))}
+.file-permission-option:hover:not(:disabled){transform:translateY(-1px)}.file-permission-option:disabled{opacity:.6;cursor:wait}
+.file-change-review{margin:14px 0;border:1px solid var(--line,#ddd);border-radius:12px;overflow:hidden;background:var(--surface,#fff)}
+.file-change-heading{display:flex;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap}.file-change-heading code{font-size:13px;overflow-wrap:anywhere}
+.file-change-meta,.file-change-review>p{padding:0 16px;font-size:12px;color:var(--muted,#777)}.file-change-review summary{padding:10px 16px;cursor:pointer;font-size:13px}
+.file-change-diff{margin:0;padding:12px 0;max-height:340px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:12px/1.65 Consolas,monospace;background:color-mix(in srgb,var(--ink,#242b2a) 3%,var(--surface,#fff))}
+.file-change-diff span{display:block;padding:0 16px}.diff-added{background:#3a8d6c18;color:var(--ink,#242b2a)}.diff-removed{background:#cf56561a;color:var(--ink,#242b2a)}.diff-context{opacity:.58}
+@media(prefers-reduced-motion:reduce){.file-permission-option{transition:none;transform:none!important}}

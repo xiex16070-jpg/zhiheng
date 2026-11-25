@@ -1,0 +1,30 @@
+知衡 · Agent 工作台（Windows x64）
+
+1. 在 Windows 10/11 x64 上，将整个 ZIP 解压到本地目录。建议选择较短的路径，例如 D:\Apps\Zhiheng。双击 Zhiheng.exe 启动管理窗口，默认浏览器会打开本机工作台。保留 app、runtime 与 Zhiheng.exe 的相对位置。
+2. 在浏览器的设置中选择模型服务，或连接你已安装的本地模型。自带的形式逻辑与程序验证教材可供检索。AI 回答使用你配置的模型；模型、账号、API Key 和第三方服务由使用者提供。
+3. 从管理窗口退出可停止服务。用户数据保存在 %LOCALAPPDATA%\Zhiheng\LogicKBAgent\data；升级时先退出旧版，再从新目录打开。保留该数据目录及浏览器原来的个人配置，便于使用原有的登录身份和会话。在管理窗口或 data\server.log 查看启动信息。
+4. 文档 PDF 排版和隔离浏览器工具可使用本机已有的 Microsoft Edge、Google Chrome，或与 Playwright 匹配的 Chromium。此包自带 Node.js 和运行依赖。可选 MySQL、Redis、向量数据库、OCR、重排及 MCP 服务根据项目需要另行配置。
+
+命令行
+  Zhiheng.exe --start                 后台启动或复用本机服务
+  Zhiheng.exe --stop                  正常停止本应用服务
+  Zhiheng.exe --start --data-dir D:\ZhihengTest\data
+  Zhiheng.exe --stop  --data-dir D:\ZhihengTest\data
+
+核对下载
+  在 PowerShell 运行 Get-FileHash -Algorithm SHA256 <ZIP文件路径>，与同一 Release 的 .sha256 文件对照。
+  release.json 记录源代码提交、运行时版本与锁文件摘要。运行时许可证在 runtime\LICENSE。
+
+第三方组件
+  应用依赖清单在 licenses\npm-inventory.json。完整 npm 包源码、许可证与声明保存在 app\node_modules 各组件目录。
+  软件基础（Software Foundations）教材作者、译者、来源及两卷 MIT 许可见 app\data\formal\README.md 和 sources。
+  页面动效保留 Motion 及 GSAP 标识和版权，见 app\assets\vendor\NOTICE.txt。GSAP 使用 GreenSock Standard License（https://gsap.com/standard-license）。
+  文献格式化组件 citeproc-js，Copyright (c) 2009-2019 Frank Bennett。完整可读源代码与作者分发声明位于 app\node_modules\citeproc。
+  作者提供 CPAL 1.0 或 AGPL 第 3 版及后续版本（以组件内 LICENSE 原文为准）。对应许可全文在 licenses，分别取自 SPDX license-list-data v3.27.0。
+  Citation Style Language 的 APA、Vancouver、Harvard 样式和五种语言文件随 Citation.js 原样分发，使用 CC BY-SA 3.0（https://creativecommons.org/licenses/by-sa/3.0/）。每个 XML 的 info 元素保留作者、贡献者、译者及来源；见 app\node_modules\@citation-js\plugin-csl\lib 内的 styles.json 和 locales.json。上游项目为 https://github.com/citation-style-language/styles 和 https://github.com/citation-style-language/locales 。
+  Playwright 的录制、仪表盘和轨迹查看器内含 Microsoft 及贡献者的 Codicons 图标字体，随上游包原样分发。作品来源 https://github.com/microsoft/vscode-codicons ，内容许可 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。Playwright 的其他第三方声明见 app\node_modules\playwright-core\ThirdPartyNotices.txt。
+  此包保留各组件自己的许可。原始上游包清单信息、随包的版权文本和作者许可声明一起阅读。
+
+项目分发范围
+  知衡（Zhiheng）第一方源代码、文档与项目原创资源采用 Apache License 2.0 许可证（Copyright 2026 Zhiheng Contributors），完整许可与声明见包内 LICENSE 与 NOTICE，公开仓库位于 https://github.com/xiex16070-jpg/zhiheng 。
+  第三方组件与内置开放教材继续适用其各自的上游许可。视觉资源的来源及生成记录见 app\assets\README.md。当前 Beta 版启动器 Zhiheng.exe 未进行 Authenticode 代码签名，下载后请对照同版本 .sha256 文件核对完整性。

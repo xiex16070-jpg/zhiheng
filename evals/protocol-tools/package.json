@@ -1,0 +1,8 @@
+{
+  "name": "logic-kb-conformance",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/conformance": "0.1.16"
+  }
+}

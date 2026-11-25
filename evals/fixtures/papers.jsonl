@@ -1,0 +1,7 @@
+{"id":101,"title":"锂离子电池正极材料改性研究","abstract":"层状氧化物正极材料通过表面包覆和元素掺杂改善循环稳定性。该研究没有给出具体寿命增幅，也没有比较所有商业电池。","keywords":"锂离子电池;正极材料;表面包覆;元素掺杂","discipline":"材料科学与工程","category":"工学"}
+{"id":102,"title":"水稻抗旱性综合评价方法","abstract":"水稻抗旱性评价应结合产量保持率、叶片相对含水量和根系性状。单一生理指标不能代替田间产量评价。试验范围限于三个供试品种。","keywords":"水稻;抗旱;产量;生理指标","discipline":"作物学","category":"农学"}
+{"id":103,"title":"Graph neural networks for molecular property prediction","abstract":"Graph neural networks represent atoms as nodes and chemical bonds as edges. Message passing aggregates neighboring features to predict molecular properties. This study does not establish clinical efficacy.","keywords":"graph;neural;network;molecule;message passing","discipline":"计算机科学与技术","category":"工学"}
+{"id":104,"title":"牡丹冷链数字化监测与损耗控制","abstract":"牡丹鲜切花冷链通过温湿度传感器和运输轨迹记录识别温控异常。损耗率必须按同一批次的入库量与报损量计算；研究未报告全国平均损耗率。","keywords":"牡丹;冷链;数字化;损耗;温湿度","discipline":"农业工程","category":"农学"}
+{"id":105,"title":"论文检索中词法与语义召回融合","abstract":"词法检索适合精确术语匹配，向量召回补充同义表达。倒数排名融合按各通道排名合并候选。跨编码器可对候选问答对重新评分，但相关性高并不保证答案结论受原文支持。","keywords":"检索;RRF;重排;跨编码器;引用","discipline":"计算机科学与技术","category":"工学"}
+{"id":106,"title":"扫描论文的OCR与版面恢复","abstract":"扫描件缺少可复制文字层，需要光学字符识别。双栏论文应恢复阅读顺序，并保存页码、段落边界与原文偏移。表格识别需单独核对合并单元格与数值。","keywords":"扫描;OCR;双栏;表格;页码","discipline":"计算机科学与技术","category":"工学"}
+{"id":107,"title":"作物传感器监测概述","abstract":"温湿度传感器记录环境变化。传感器监测结果不能直接推导水稻品种的抗旱排名。","keywords":"传感器;水稻;监测","discipline":"农业工程","category":"农学"}

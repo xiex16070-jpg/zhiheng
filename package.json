@@ -1,0 +1,76 @@
+{
+  "name": "logic-kb-agent",
+  "version": "3.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiex16070-jpg/zhiheng.git"
+  },
+  "homepage": "https://github.com/xiex16070-jpg/zhiheng#readme",
+  "bugs": {
+    "url": "https://github.com/xiex16070-jpg/zhiheng/issues"
+  },
+  "type": "module",
+  "description": "知衡：项目驱动的研究、创作与执行 Agent 工作台，集成多源知识、中文逻辑、工具与可预览产物",
+  "scripts": {
+    "start": "node server.mjs",
+    "setup:browser": "playwright install chromium",
+    "stack": "node scripts/dev-stack.mjs",
+    "ingest": "node scripts/ingest-formal.mjs",
+    "ingest:csl": "node scripts/ingest-csl.mjs",
+    "corpus:check": "node scripts/ingest-formal.mjs --check",
+    "logic": "node scripts/hanlogic.mjs",
+    "mcp": "node mcp-server.mjs",
+    "mock": "node scripts/mock-llm.mjs",
+    "stub:ragflow": "node scripts/stub-ragflow.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "test": "node --test",
+    "test:properties": "node --test --test-name-pattern=property: tests/hanlogic-properties.test.mjs tests/background-properties.test.mjs tests/exec-approval.test.mjs",
+    "eval:retrieval": "node evals/run.mjs retrieval",
+    "eval:chat": "node evals/run.mjs live",
+    "eval:compare": "node evals/compare.mjs",
+    "eval:formal": "node evals/formal.mjs",
+    "data:export": "node scripts/export-trajectories.mjs",
+    "model:profile": "node scripts/export-model-profile.mjs",
+    "build:ui": "node scripts/build-ui-motion.mjs",
+    "check:ui": "node scripts/build-ui-motion.mjs --check && node scripts/check-ui-tokens.mjs"
+  },
+  "engines": {
+    "node": "^22.12.0 || ^24 || >=26"
+  },
+  "dependencies": {
+    "@citation-js/core": "0.7.21",
+    "@citation-js/plugin-bibtex": "0.7.21",
+    "@citation-js/plugin-csl": "0.7.22",
+    "@citation-js/plugin-ris": "0.7.21",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@pdf-lib/fontkit": "1.1.1",
+    "ajv": "8.20.0",
+    "docx": "9.15.2",
+    "exceljs": "4.4.0",
+    "fflate": "0.8.3",
+    "gsap": "3.15.1",
+    "ioredis": "^6.0.0",
+    "marked": "15.0.12",
+    "motion": "14.9.1",
+    "mysql2": "^3.24.6",
+    "pdf-lib": "1.17.1",
+    "playwright": "1.64.1",
+    "pptxgenjs": "4.0.1",
+    "sanitize-html": "2.18.1",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "fast-check": "4.10.2"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    },
+    "pptxgenjs": {
+      "image-size": "2.0.4"
+    }
+  }
+}

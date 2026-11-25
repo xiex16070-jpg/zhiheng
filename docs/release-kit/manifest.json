@@ -1,0 +1,496 @@
+{
+  "commit": "420b373d2e4fc629fc92ec9babbecb6dbbc8271e",
+  "version": "3.1.0",
+  "chromium": "153.0.8010.12",
+  "node": "v24.14.1",
+  "corpusRecords": 712,
+  "scriptedModelCalls": 12,
+  "externalModelCalls": 0,
+  "localMcpResultObserved": true,
+  "captureDate": "2026-11-24",
+  "rawCaptureSha256": {
+    "01-agent.png": "b88776d9203468f72d8e19fbd7c74693683cb67938055aa56474ca3992c9178d",
+    "02-research.png": "c6f47f1170d8f8f20f87e22d8bb7dcd33d24b975d0c620de80c3fae13ee264d0",
+    "03-library.png": "2a301daaf20bb84f4bbd65c218a96f2eb9fc692cbb1ef8b307e944809ede8906",
+    "04-conclusions.png": "3c1d96b2ca57c926f1d376e4ba4c8b3dc326309947eee7e6243425fc1e0faa59",
+    "05-citations.png": "cf9c9633533fd211b5fdfe3096952999811c1fdf6b28a195ebf60f47654f25e1",
+    "06-source.png": "95823ca2d343cd2e9f365ce2e62674e8ce7dec0866493727dc270a6f221179b0",
+    "07-approval.png": "79e61d03fe2469d3ae82764f1b1762600446c969f9b00ca839810f38c52caa31",
+    "08-execution.png": "23431aeeddec5e1441184a577ae6783fff45c48930114659a27ecb460df65999",
+    "09-preview.png": "dfbe5ce996384ed5821a5cccd450a1fdf2245b59c1dd18287cc6ab2ff502bb21",
+    "10-preview-window.png": "987692c59eb7e8affb162d87dd57978c54135be776c4488192b3c599bc42a70a",
+    "11-files.png": "9c6de6bec59af1f1629b24d36b6867746ac432ad44632592cf3c6131ceeea231",
+    "12-activity.png": "74e8512a1a40d809aa03d84c997c68af9e47c3791c0808eeb2f9d8f73257afeb",
+    "13-strategies.png": "f9604d345e3c8a16793dd287822aa507a9ee0a08aa0afc0b74f6b3d5372187ff",
+    "14-hanlogic.png": "ef9cbb2849b5922f8f457303544e9b0ebba2800f429ee0dd18efbe648658995f",
+    "15-capabilities.png": "92f78721b43d481cc8a87ed844aaaf6ac79de73a51037d786e18f37a4da3cf3a",
+    "16-memory.png": "5116dd1099aa5226ce545204b8b4d618ee62efd7ced4f39afca8485b7516bc65",
+    "17-skills.png": "034067b2fd2a676d97df494fce56cbd501f53fe14a21a907dacc1e967e4af435",
+    "18-skill-detail.png": "acc24727102078659065a7a88f9013bce857f7f92f9c6df52b49c62040050586",
+    "19-settings.png": "bb16dd05e5d416ba27ee1b469895469fdab1005dec279f616d5b2b4c7dcf3897",
+    "20-runtime.png": "829c934fd5251607b7544d5410d54fa2fc51b05b453d8ceb2a80b4452a7462e4",
+    "21-context.png": "64bb4920bb44dffeb0446fcf3f0455b46b1faadf946c11e59441a1e987bac83e",
+    "22-team.png": "282c588ceeae7aa50ebddefc693298ae9b925491ff9c45b5375ecd0aa5541d8c",
+    "23-audit.png": "7368e4c69c23789c3a2de19499b3336215b4bfbefc50907737dc11ea1bd245a2",
+    "24-search.png": "471972d3155363c88890c88ad8a09aa754a39da6310be9e949a380ba0299a880",
+    "25-joint.png": "d856b67098fe29be799dcbcff33127b085ab386d0085dc2e5efb4b99fc79af56",
+    "26-pack.png": "083df04b225363b0371517b5015f815865ed0807cac8147c297078c7636d06dc",
+    "27-mcp.png": "9ca78ee83e5c91a7c01301f27a1db04aef74e6551b434c06037945e656786a77",
+    "28-model.png": "eaae26a8df1b869ef71c7a1235d0cc7d5d841d2765d04ef6b55fe428f2a19153",
+    "29-dark.png": "8481a4c042f67b9cb4b22485c440005648cc33775a8e31ec02c5bf4413cf5613",
+    "30-mobile.png": "197a785d2c44b20cef3b5e0a782252865268696836ef4df53985a222863fca80",
+    "31-permissions.png": "cfcdc55576a87755abd44473f019c99c8b672bb5156be1de1f1d738b6e2d0b4f",
+    "32-command.png": "0ded6cec9912417d92a984ddea2e99a6fc4a88b8f19e883d94e0a5aac838fa04",
+    "33-onboarding.png": "7d59b377a7aa8eb33e0f82dfcb3354c700d8b781e9123355c969bfd9b893154e",
+    "34-appearance.png": "106335c6cf6e636b57a7d3347dfb2d88f0d9d86bc39328aafb71fd554355efec",
+    "35-zotero.png": "e7b26886519013abc3da5ae9051cab8eab484eccacdc74f8495f1663ab7aec09",
+    "36-image.png": "8f8287bc1b0ad94d4f44e21047073ab717feee37528346795f3f3259bed42748",
+    "37-references.png": "b9147000622f3a5cf7fa06a381bfbac08f160bf8ad300c3f492a1d58a40b0c65",
+    "38-monitor.png": "79a0c955d74e243f0c39e833a0077fb8a7e4b18c8657fc962c75a36181a7dc3a",
+    "39-sections.png": "89e1395e2eba82a9bdaa9c8d729fb013337ef553d85430eef79659ac74a61545"
+  },
+  "groups": [
+    {
+      "group": "开始",
+      "images": [
+        {
+          "file": "images/01-agent.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "9c1173ae2afe0959e055deff2ce9231c55729363d3c235a4f44af325bca83e0f",
+          "title": "Agent 工作台",
+          "status": "本机界面",
+          "caption": "选项目、写任务。常用入口在左栏，工具和执行状态在对话中查看。",
+          "fromCapture": "01-agent.png"
+        },
+        {
+          "file": "images/02-research.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "ebac0ae8513102cc319ac70d34d024e1363ebc9c10f2bbf988126ed61d8243da",
+          "title": "知识库研究首页",
+          "status": "本机界面",
+          "caption": "在知识库范围内提出问题，也可以从按范围刷新的问题索引开始。",
+          "fromCapture": "02-research.png"
+        },
+        {
+          "file": "images/33-onboarding.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "e388af80414a6c9a370e351a32b6ca031eb3c11aa18aa8ae63847820d3a7e2db",
+          "title": "首次连接模型",
+          "status": "本机界面",
+          "caption": "新用户可从输入区打开模型配置。首次连接与推理质量取决于所选后端。",
+          "fromCapture": "33-onboarding.png"
+        },
+        {
+          "file": "images/28-model.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "0783938eb8089b5d4443f6b1f9595a80b1284fa3de2a4af7e48bcdf7cebfaea2",
+          "title": "模型接口与能力",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "自定义兼容地址、模型及能力选项。图中的回环演示地址已遮挡。",
+          "fromCapture": "28-model.png"
+        },
+        {
+          "file": "images/32-command.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "9444baab48f88cba1845083211d9327ab6e6e56718ced71e2193ac1987717820",
+          "title": "搜索与命令",
+          "status": "本机界面",
+          "caption": "从命令面板切换页面、查找会话与打开常用设置。",
+          "fromCapture": "32-command.png"
+        },
+        {
+          "file": "images/29-dark.png",
+          "width": 1868,
+          "height": 1377,
+          "sha256": "611ffc4cdb327364ffe1452d5df19fcbfc282b34964b2cf39193959c1ae2b8a0",
+          "title": "深色主题",
+          "status": "本机界面",
+          "caption": "相同的工作台支持深色界面。",
+          "fromCapture": "29-dark.png"
+        },
+        {
+          "file": "images/34-appearance.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "88c2d3256bef90d95a1b5304c66a305dc352be26a732b7e189166e45f53ee48e",
+          "title": "外观与动效",
+          "status": "本机界面",
+          "caption": "设置主题、启动动画和减少动效偏好。",
+          "fromCapture": "34-appearance.png"
+        },
+        {
+          "file": "images/30-mobile.png",
+          "width": 556,
+          "height": 1292,
+          "sha256": "d912af01f8dd4050187edb456350aed5cc405751ce3e0cf1909d134e24c65ad1",
+          "title": "窄屏工作台",
+          "status": "本机界面",
+          "caption": "Chromium 390 px 视口。移动系统和软键盘的长时间使用仍待验。",
+          "fromCapture": "30-mobile.png"
+        }
+      ]
+    },
+    {
+      "group": "研究",
+      "images": [
+        {
+          "file": "images/03-library.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "0af12965cbecb3df8a4ee2155635d3ba111992ec891b1f18a73b55b9ee00a7b5",
+          "title": "知识库 · 原始资料",
+          "status": "本机界面",
+          "caption": "导入的案例和随包教材都可查看。导入样本为本次编写的 Markdown。",
+          "fromCapture": "03-library.png"
+        },
+        {
+          "file": "images/39-sections.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "61e9d4709a8fcda2c502422ffada36e8b701abf9fb126ce80fe6096bc299faee",
+          "title": "整理学科分区",
+          "status": "本机界面",
+          "caption": "选中导入资料组成分区，便于在对应范围内研究。",
+          "fromCapture": "39-sections.png"
+        },
+        {
+          "file": "images/04-conclusions.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "cbbd5c5c3b031b307ee3ac8bb447c02b94e112ee240316fa72bd7a57d6961b22",
+          "title": "验证结论",
+          "status": "本机界面",
+          "caption": "候选结论可回到原文复查并申请确认。这张图展示新资料库的空状态。",
+          "fromCapture": "04-conclusions.png"
+        },
+        {
+          "file": "images/05-citations.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "7d4c81bf8757a1b06efb3d867b2c9cb208d40f0ee68f55c706927d83abbd2217",
+          "title": "带引用的答案",
+          "status": "本机链路 · 脚本模型",
+          "caption": "答案由演示脚本提供。引用卡来自对公开教材的实际检索，默认折叠。",
+          "fromCapture": "05-citations.png"
+        },
+        {
+          "file": "images/06-source.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "f99be8ade9c0090ffa65f6076b37978a8926631d582d0cea99d0fa8f9a5144d1",
+          "title": "阅读并定位原文",
+          "status": "本机链路 · 脚本模型",
+          "caption": "阅读器高亮实际教材片段，并显示教材出处及许可。",
+          "fromCapture": "06-source.png"
+        },
+        {
+          "file": "images/37-references.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "b4837c86809c8297625f6f73bb1c95b481095d55a11200ae52deb54248572ee0",
+          "title": "导出参考文献",
+          "status": "本机链路 · 脚本模型",
+          "caption": "同一回答可导出 CSL-JSON、BibTeX、RIS 或 APA。本轮实际下载了 CSL-JSON。",
+          "fromCapture": "37-references.png"
+        },
+        {
+          "file": "images/13-strategies.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "be5b5a90123f2b44d242e5baa6874e329423db7d6c7dd59c4440077cce048e11",
+          "title": "文献推理策略",
+          "status": "本机界面",
+          "caption": "可以选择 ReAct、IRCoT 或 ToT。策略优劣需在相同问题与模型上继续评估。",
+          "fromCapture": "13-strategies.png"
+        },
+        {
+          "file": "images/14-hanlogic.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "e09e671d924a0d8d47f4ff21ccb39638ee1667c8bdc4894fd6f7f43920be1421",
+          "title": "HanLogic 规则验算",
+          "status": "本机界面",
+          "caption": "运行内置示例，查看成立与未知。证明只对示例给定的事实和规则成立。",
+          "fromCapture": "14-hanlogic.png"
+        },
+        {
+          "file": "images/23-audit.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "3d684fee135ab7a9c4ecdfa854d6316c81e8f48bc76e4cb052152b1fe06adceb",
+          "title": "独立证据审核",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "审核接口、模型与预算可单独配置。真人评测与独立裁判服务仍需另行验收。",
+          "fromCapture": "23-audit.png"
+        },
+        {
+          "file": "images/24-search.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "f83bf265f622339293d0bedb39634fb93f5edf210fff2b3bd6c0ab9bff2ffef2",
+          "title": "网站与学术搜索",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "搜索配置分别保存和测试。外部配额、资格和可用性随服务变化。",
+          "fromCapture": "24-search.png"
+        },
+        {
+          "file": "images/25-joint.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "8b2af39ec316aa435bf1d2c3a6bfc916194dcd8e1bd6d1a3effccfe08c336bd8",
+          "title": "联合研究与回答偏好",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "控制本地和外部证据候选的分配，外部来源需要有效配置。",
+          "fromCapture": "25-joint.png"
+        }
+      ]
+    },
+    {
+      "group": "执行与交付",
+      "images": [
+        {
+          "file": "images/07-approval.png",
+          "width": 1868,
+          "height": 1715,
+          "sha256": "ef56dc16b07f08e63a3c3063b3687d96d6df54923b898c59e79afdfbc370e24c",
+          "title": "逐次核对文件改动",
+          "status": "本机链路 · 脚本模型",
+          "caption": "审批卡展示真实差异，批准前临时项目内的原文件保持原样。",
+          "fromCapture": "07-approval.png"
+        },
+        {
+          "file": "images/08-execution.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "382ce4fe2f90fc24067530244103aabaa9b127f8a78363aecedd57c3d8856eb4",
+          "title": "查看 Agent 执行步骤",
+          "status": "本机链路 · 脚本模型",
+          "caption": "计划与工具事件来自本地编排器。图中耗时对应脚本模型的演示。",
+          "fromCapture": "08-execution.png"
+        },
+        {
+          "file": "images/09-preview.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "00dbed117d17e839186acf6bbcfb227d6dc863a4023f7e5f897ce9a6dfc3fc5d",
+          "title": "对话与文件并排阅读",
+          "status": "本机链路 · 脚本模型",
+          "caption": "获批写入后的 Markdown 显示标题、表格和清单，左栏保留会话。",
+          "fromCapture": "09-preview.png"
+        },
+        {
+          "file": "images/10-preview-window.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "263825a05f663c12c79eb4e594128385ce67619ff0571889537ecffba3e19de8",
+          "title": "独立文件阅读窗口",
+          "status": "本机链路 · 脚本模型",
+          "caption": "同一份项目产物可在单独窗口阅读、查看源码与下载。",
+          "fromCapture": "10-preview-window.png"
+        },
+        {
+          "file": "images/11-files.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "5c7df86898390eacd28477a98e09a7e51e5c0e34c6295bf2618bc67b69985731",
+          "title": "项目文件",
+          "status": "本机界面",
+          "caption": "按项目列出文件，支持预览与下载。图中的临时目录路径已遮挡。",
+          "fromCapture": "11-files.png"
+        },
+        {
+          "file": "images/12-activity.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "5f17f9a93198387987c24ada96cfdb3deecb701401ffad896bcede473d71555e",
+          "title": "任务中心",
+          "status": "本机界面",
+          "caption": "后台任务、等待处理和已结束记录集中在这里。此图使用独立演示资料。",
+          "fromCapture": "12-activity.png"
+        },
+        {
+          "file": "images/31-permissions.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "2ed9cdcb4c9e44c033fe146cafeedcf6115c3dce88b3fc5ef68b12a36f6b13d4",
+          "title": "项目文件权限",
+          "status": "本机界面",
+          "caption": "逐次确认、信任当前项目和只读浏览均可在设置中查看。",
+          "fromCapture": "31-permissions.png"
+        }
+      ]
+    },
+    {
+      "group": "技能与设置",
+      "images": [
+        {
+          "file": "images/15-capabilities.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "7422a54beaf0cb294d689db1cc94195f7068d0bc419db1fb9ff67d11750b48ca",
+          "title": "能力导航",
+          "status": "本机界面",
+          "caption": "查看内置能力及其配置入口。出现配置入口即表示可以设置，连通性单独测试。",
+          "fromCapture": "15-capabilities.png"
+        },
+        {
+          "file": "images/16-memory.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "d2489afb9187ffd6a53d38e32ba3f4cceb58a68f97d33c6e526637c2c3c0c714",
+          "title": "长期记忆",
+          "status": "本机界面",
+          "caption": "环境事实与用户画像分栏管理。图示空状态，长周期画像质量待验证。",
+          "fromCapture": "16-memory.png"
+        },
+        {
+          "file": "images/17-skills.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "08f319aae32cb85515ac5bca1599e1e705046d1638d5b2a56c28895c6c053222",
+          "title": "技能库",
+          "status": "本机界面",
+          "caption": "按任务选择技能。用户可以管理个人技能并核查技能来源。",
+          "fromCapture": "17-skills.png"
+        },
+        {
+          "file": "images/18-skill-detail.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "e7d1a8c9fa7d6f4e7a6dd21f42b9f892ade4938dff898425333352f5e7acac70",
+          "title": "技能详情与导出",
+          "status": "本机界面",
+          "caption": "查看具体技能步骤，导出 Agent Skills ZIP。附件交换仍有兼容限制。",
+          "fromCapture": "18-skill-detail.png"
+        },
+        {
+          "file": "images/19-settings.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "d093be5102e7cea114bae70fafb691b1f08e32a9970eb44290c82b66cd5a4f11",
+          "title": "设置导航",
+          "status": "本机界面",
+          "caption": "使用顶部分类直接跳到功能设置。",
+          "fromCapture": "19-settings.png"
+        },
+        {
+          "file": "images/20-runtime.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "a360b017a31927159e7e918a6e1bff69804a9c9e8e0994c2ed7dc5564bf8bec1",
+          "title": "执行环境",
+          "status": "本机界面",
+          "caption": "在同一页查看命令、进程会话、本机浏览器和数学排版的配置。",
+          "fromCapture": "20-runtime.png"
+        },
+        {
+          "file": "images/21-context.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "1661b5a277ce77c7541da468dee71d30f192ee3180b4e0551e5a5cc9d8f7f46c",
+          "title": "上下文洞察",
+          "status": "本机界面",
+          "caption": "查看会话预算及实际记录。脚本模型的统计用于演示，线上计费以服务端为准。",
+          "fromCapture": "21-context.png"
+        },
+        {
+          "file": "images/38-monitor.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "70c44f949e3d099f4a01303bf34e0f12658c67549cb4e53b48973573b02cafd7",
+          "title": "运行监控",
+          "status": "本机界面",
+          "caption": "本地任务与存储指标来自隔离演示，耗时不能用作正式性能数据。",
+          "fromCapture": "38-monitor.png"
+        },
+        {
+          "file": "images/22-team.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "ee4d4e36474e17b5bd7dc72ae42732e22cb358638589d0bc3defeb5bd0cc14d9",
+          "title": "智能体团队配置",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "可填写成员职责与预算。本机第三方代理和模型组合的真实协作覆盖仍待验证。",
+          "fromCapture": "22-team.png"
+        },
+        {
+          "file": "images/26-pack.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "be5ee1f3eb60021c70184a74aa296537e7e86f26f3687bc9e81c8daf9f36ec25",
+          "title": "技能包只读预检",
+          "status": "本机界面",
+          "caption": "预检仓库提供的示例目录，核对技能说明与当前兼容性，保持安装列表为空。",
+          "fromCapture": "26-pack.png"
+        },
+        {
+          "file": "images/27-mcp.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "3fa6e70b15fc77f8461277872a7c2379d487a9ce3452804038e3884518291f27",
+          "title": "连接社区 MCP",
+          "status": "本机界面",
+          "caption": "项目提供的本机 stdio 示例已通过发现、选择工具、逐次审批与实际调用。",
+          "fromCapture": "27-mcp.png"
+        },
+        {
+          "file": "images/35-zotero.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "5350b4dadb9f2854c368398b53b61f478eb9cb5de47db7d7e4d10bf76d44173a",
+          "title": "连接 Zotero 文献库",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "使用本机 Zotero API 读取资料，需要单独检测自己的桌面服务。",
+          "fromCapture": "35-zotero.png"
+        },
+        {
+          "file": "images/36-image.png",
+          "width": 1868,
+          "height": 1402,
+          "sha256": "0bb1167461cc25a92afc5afae1384fde84e759ee5bc42f7881aa197800707320",
+          "title": "独立图像接口",
+          "status": "设置预览 · 外部服务待验证",
+          "caption": "生成服务与对话模型分开配置，真实图像服务本轮未调用。",
+          "fromCapture": "36-image.png"
+        }
+      ]
+    }
+  ],
+  "posters": [
+    {
+      "file": "images/00-cover.png",
+      "width": 1600,
+      "height": 1030,
+      "sha256": "328da6ce011897ff3f1fad1a3699f12ea33888d1ce56b6cc100343976a097f8a",
+      "title": "从原文检索，到项目交付",
+      "status": "本机链路 · 脚本模型",
+      "caption": "在同一工作台读证据、核对文件变化，并保留可回看的交付物。",
+      "fromCapture": "09-preview.png"
+    },
+    {
+      "file": "images/00-evidence.png",
+      "width": 1600,
+      "height": 1030,
+      "sha256": "7815ec5954bdd203bd122585cb1cac50d3f7a8141ba6e9c05b728726c7ad90d8",
+      "title": "在答案旁读回原文",
+      "status": "公开教材 · 脚本对话",
+      "caption": "展开引用，定位教材片段。把依据、推断和还需核查的条件一起留下。",
+      "fromCapture": "06-source.png"
+    },
+    {
+      "file": "images/00-community.png",
+      "width": 1600,
+      "height": 1030,
+      "sha256": "877c778a9f21eed49abfb73713c0ac0d317151d1ef4a4c9eb7634fd27eb57fa7",
+      "title": "让研究流程可以复用",
+      "status": "本机预检 · 示例插件",
+      "caption": "把核查步骤写成技能，先预检，再安装。通过独立连接选择可用的 MCP 工具。",
+      "fromCapture": "26-pack.png"
+    }
+  ]
+}
